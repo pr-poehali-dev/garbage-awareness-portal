@@ -5,7 +5,7 @@ import SolutionsSection from '@/components/SolutionsSection';
 import MapSection from '@/components/MapSection';
 import EcoTamagotchi from '@/components/EcoTamagotchi';
 import TrashSortingGame from '@/components/TrashSortingGame';
-import AbsurdCalculator from '@/components/AbsurdCalculator';
+import GoodImpactCalculator from '@/components/GoodImpactCalculator';
 import GretaAssistant from '@/components/GretaAssistant';
 import PremiumEcoPass from '@/components/PremiumEcoPass';
 import FloatingLogo from '@/components/FloatingLogo';
@@ -75,7 +75,7 @@ const Index = () => {
             <EcoTamagotchi onLevelUp={handleScoreUpdate} />
             <TrashSortingGame onScore={handleScoreUpdate} />
             <EcoBossBattle onVictory={handleScoreUpdate} />
-            <AbsurdCalculator />
+            <GoodImpactCalculator />
             <GretaAssistant />
           </div>
         </div>
