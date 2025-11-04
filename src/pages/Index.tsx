@@ -44,7 +44,7 @@ const Index = () => {
     { name: 'ГринПойнт', address: 'Омск, ул. Маяковского, 65', types: ['батарейки', 'пластик', 'стекло'], lat: 54.9884, lng: 73.3675 },
     { name: 'ЭкоБокс 55', address: 'Омск, ул. Лукашевича, 8', types: ['электроника', 'металл', 'пластик'], lat: 54.9674, lng: 73.3291 },
     { name: 'ЧистоГрад', address: 'Омск, ул. Фрунзе, 72', types: ['стекло', 'бумага', 'картон'], lat: 54.9801, lng: 73.3598 }
-  ];}
+  ];
 
   const handleScoreUpdate = (points: number) => {
     setEcoScore(prev => prev + points);
