@@ -3,7 +3,10 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import SolutionsSection from '@/components/SolutionsSection';
 import MapSection from '@/components/MapSection';
-import QuizSection from '@/components/QuizSection';
+import EcoTamagotchi from '@/components/EcoTamagotchi';
+import TrashSortingGame from '@/components/TrashSortingGame';
+import AbsurdCalculator from '@/components/AbsurdCalculator';
+import GretaAssistant from '@/components/GretaAssistant';
 import ResourcesSection from '@/components/ResourcesSection';
 import Footer from '@/components/Footer';
 import AuthModal from '@/components/AuthModal';
@@ -11,9 +14,7 @@ import ProfileModal from '@/components/ProfileModal';
 
 const Index = () => {
   const [wasteCounter, setWasteCounter] = useState(8547320);
-  const [quizScore, setQuizScore] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [showQuizResult, setShowQuizResult] = useState(false);
+  const [ecoScore, setEcoScore] = useState(0);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [showProfileModal, setShowProfileModal] = useState(false);
   const [user, setUser] = useState<{ name: string; email: string } | null>(null);
@@ -33,40 +34,8 @@ const Index = () => {
     { name: 'ЭкоПункт "Новая жизнь"', address: 'ул. Советская, 42', types: ['батарейки', 'пластик', 'металл'], lat: 54.9647, lng: 73.3789 }
   ];
 
-  const quizQuestions = [
-    {
-      question: 'В какой контейнер выбросить пластиковую бутылку?',
-      options: ['Синий (пластик)', 'Зелёный (стекло)', 'Коричневый (органика)', 'Серый (смешанные)'],
-      correct: 0
-    },
-    {
-      question: 'Сколько лет разлагается пластиковый пакет?',
-      options: ['5-10 лет', '50-100 лет', '400-1000 лет', '10-20 лет'],
-      correct: 2
-    },
-    {
-      question: 'Что нельзя выбрасывать в контейнер для бумаги?',
-      options: ['Газеты', 'Картонные коробки', 'Ламинированную бумагу', 'Журналы'],
-      correct: 2
-    }
-  ];
-
-  const handleQuizAnswer = (answerIndex: number) => {
-    if (answerIndex === quizQuestions[currentQuestion].correct) {
-      setQuizScore(prev => prev + 10);
-    }
-    
-    if (currentQuestion < quizQuestions.length - 1) {
-      setCurrentQuestion(prev => prev + 1);
-    } else {
-      setShowQuizResult(true);
-    }
-  };
-
-  const resetQuiz = () => {
-    setCurrentQuestion(0);
-    setQuizScore(0);
-    setShowQuizResult(false);
+  const handleScoreUpdate = (points: number) => {
+    setEcoScore(prev => prev + points);
   };
 
   const handleLogin = (email: string, name: string) => {
@@ -76,8 +45,7 @@ const Index = () => {
 
   const handleLogout = () => {
     setUser(null);
-    setQuizScore(0);
-    resetQuiz();
+    setEcoScore(0);
   };
 
   return (
@@ -90,14 +58,23 @@ const Index = () => {
       <HeroSection wasteCounter={wasteCounter} recyclingPointsCount={recyclingPoints.length} />
       <SolutionsSection />
       <MapSection recyclingPoints={recyclingPoints} />
-      <QuizSection 
-        quizQuestions={quizQuestions}
-        currentQuestion={currentQuestion}
-        quizScore={quizScore}
-        showQuizResult={showQuizResult}
-        onAnswer={handleQuizAnswer}
-        onReset={resetQuiz}
-      />
+      
+      <section id="interactive" className="py-20 bg-gradient-to-b from-white to-emerald-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl font-bold mb-4">🎮 Интерактивная зона</h2>
+            <p className="text-xl text-muted-foreground">Играй, учись и спасай планету с удовольствием!</p>
+          </div>
+          
+          <div className="space-y-12">
+            <EcoTamagotchi onLevelUp={handleScoreUpdate} />
+            <TrashSortingGame onScore={handleScoreUpdate} />
+            <AbsurdCalculator />
+            <GretaAssistant />
+          </div>
+        </div>
+      </section>
+      
       <ResourcesSection />
       <Footer />
       
@@ -111,7 +88,7 @@ const Index = () => {
         open={showProfileModal}
         onClose={() => setShowProfileModal(false)}
         user={user}
-        quizScore={quizScore}
+        quizScore={ecoScore}
         onLogout={handleLogout}
       />
     </div>
