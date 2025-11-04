@@ -10,6 +10,7 @@ import GretaAssistant from '@/components/GretaAssistant';
 import PremiumEcoPass from '@/components/PremiumEcoPass';
 import FloatingLogo from '@/components/FloatingLogo';
 import EcoAchievements from '@/components/EcoAchievements';
+import EcoBossBattle from '@/components/EcoBossBattle';
 import ResourcesSection from '@/components/ResourcesSection';
 import Footer from '@/components/Footer';
 import AuthModal from '@/components/AuthModal';
@@ -73,6 +74,7 @@ const Index = () => {
           <div className="space-y-12">
             <EcoTamagotchi onLevelUp={handleScoreUpdate} />
             <TrashSortingGame onScore={handleScoreUpdate} />
+            <EcoBossBattle onVictory={handleScoreUpdate} />
             <AbsurdCalculator />
             <GretaAssistant />
           </div>
