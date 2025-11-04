@@ -21,8 +21,8 @@ const MapSection = ({ recyclingPoints }: MapSectionProps) => {
     <section id="map" className="py-20 bg-gradient-to-b from-emerald-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl font-bold mb-4">Карта пунктов приёма Омска</h2>
-          <p className="text-xl text-muted-foreground">Найди ближайший пункт сдачи вторсырья</p>
+          <h2 className="text-4xl font-bold mb-4">Карта пунктов приёма</h2>
+          <p className="text-xl text-muted-foreground">Найди ближайший пункт сдачи вторсырья в твоём городе 🗺️</p>
         </div>
 
         <Tabs defaultValue="all" className="max-w-6xl mx-auto">

@@ -27,7 +27,7 @@ const HeroSection = ({ wasteCounter, recyclingPointsCount }: HeroSectionProps) =
             Мусор вокруг нас
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Интерактивная платформа для решения проблемы отходов в Омске. Узнай, как правильно сортировать мусор, найди ближайший пункт приёма и стань частью экологического движения! ♻️
+            Глобальная платформа для решения проблемы отходов. Узнай, как правильно сортировать мусор, найди ближайший пункт приёма и стань частью экологического движения! Вместе мы можем спасти нашу планету! 🌍♻️
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
@@ -36,7 +36,7 @@ const HeroSection = ({ wasteCounter, recyclingPointsCount }: HeroSectionProps) =
               <div className="text-4xl font-bold text-primary mb-2 animate-counter">
                 {wasteCounter.toLocaleString('ru-RU')}
               </div>
-              <p className="text-sm text-muted-foreground">тонн мусора в Омске в этом году</p>
+              <p className="text-sm text-muted-foreground">тонн мусора производится в мире ежегодно</p>
             </Card>
             
             <Card className="p-6 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-shadow animate-scale-in" style={{animationDelay: '0.1s'}}>

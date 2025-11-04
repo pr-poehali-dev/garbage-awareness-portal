@@ -6,12 +6,17 @@ import MapSection from '@/components/MapSection';
 import QuizSection from '@/components/QuizSection';
 import ResourcesSection from '@/components/ResourcesSection';
 import Footer from '@/components/Footer';
+import AuthModal from '@/components/AuthModal';
+import ProfileModal from '@/components/ProfileModal';
 
 const Index = () => {
   const [wasteCounter, setWasteCounter] = useState(8547320);
   const [quizScore, setQuizScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showQuizResult, setShowQuizResult] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showProfileModal, setShowProfileModal] = useState(false);
+  const [user, setUser] = useState<{ name: string; email: string } | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,11 +26,11 @@ const Index = () => {
   }, []);
 
   const recyclingPoints = [
-    { name: 'ЭкоЦентр на Красном пути', address: 'ул. Красный путь, 155', types: ['пластик', 'стекло', 'бумага'], lat: 54.9885, lng: 73.3242 },
-    { name: 'Пункт приёма на Ленина', address: 'пр. Ленина, 24', types: ['батарейки', 'лампы', 'электроника'], lat: 54.9924, lng: 73.3686 },
-    { name: 'ЭкоСтанция Левобережье', address: 'ул. 10 лет Октября, 195', types: ['пластик', 'металл', 'одежда'], lat: 55.0281, lng: 73.3174 },
-    { name: 'Зелёный мир на Декабристов', address: 'ул. Декабристов, 45', types: ['стекло', 'бумага', 'картон'], lat: 54.9736, lng: 73.3842 },
-    { name: 'ЭкоПункт на Conquista', address: 'ул. Conquista, 18', types: ['батарейки', 'пластик', 'металл'], lat: 54.9647, lng: 73.3789 }
+    { name: 'ЭкоЦентр "Зелёная планета"', address: 'ул. Ленина, 50', types: ['пластик', 'стекло', 'бумага'], lat: 54.9885, lng: 73.3242 },
+    { name: 'Пункт приёма "ЭкоСити"', address: 'пр. Мира, 120', types: ['батарейки', 'лампы', 'электроника'], lat: 54.9924, lng: 73.3686 },
+    { name: 'ЭкоСтанция "Чистый мир"', address: 'ул. Победы, 88', types: ['пластик', 'металл', 'одежда'], lat: 55.0281, lng: 73.3174 },
+    { name: 'Центр переработки "ВторРесурс"', address: 'ул. Садовая, 15', types: ['стекло', 'бумага', 'картон'], lat: 54.9736, lng: 73.3842 },
+    { name: 'ЭкоПункт "Новая жизнь"', address: 'ул. Советская, 42', types: ['батарейки', 'пластик', 'металл'], lat: 54.9647, lng: 73.3789 }
   ];
 
   const quizQuestions = [
@@ -64,9 +69,24 @@ const Index = () => {
     setShowQuizResult(false);
   };
 
+  const handleLogin = (email: string, name: string) => {
+    setUser({ email, name });
+    setShowAuthModal(false);
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    setQuizScore(0);
+    resetQuiz();
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
-      <Header />
+      <Header 
+        onAuthClick={() => setShowAuthModal(true)} 
+        user={user}
+        onProfileClick={() => setShowProfileModal(true)}
+      />
       <HeroSection wasteCounter={wasteCounter} recyclingPointsCount={recyclingPoints.length} />
       <SolutionsSection />
       <MapSection recyclingPoints={recyclingPoints} />
@@ -80,6 +100,20 @@ const Index = () => {
       />
       <ResourcesSection />
       <Footer />
+      
+      <AuthModal 
+        open={showAuthModal} 
+        onClose={() => setShowAuthModal(false)}
+        onLogin={handleLogin}
+      />
+      
+      <ProfileModal
+        open={showProfileModal}
+        onClose={() => setShowProfileModal(false)}
+        user={user}
+        quizScore={quizScore}
+        onLogout={handleLogout}
+      />
     </div>
   );
 };

@@ -9,10 +9,10 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Icon name="Leaf" size={32} />
-              <span className="text-xl font-bold">ЭкоОмск</span>
+              <span className="text-xl font-bold">ЭкоМир</span>
             </div>
             <p className="text-background/70">
-              Платформа для решения проблемы отходов в нашем городе
+              Глобальное движение за чистую планету и ответственное обращение с отходами
             </p>
           </div>
 
@@ -31,15 +31,15 @@ const Footer = () => {
             <ul className="space-y-2 text-background/70">
               <li className="flex items-center gap-2">
                 <Icon name="Mail" size={16} />
-                <span>info@ecoomsk.ru</span>
+                <span>soaga862@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <Icon name="Phone" size={16} />
-                <span>+7 (3812) 555-777</span>
+                <span>+7 (983) 623-27-46</span>
               </li>
               <li className="flex items-center gap-2">
                 <Icon name="MapPin" size={16} />
-                <span>Омск, Россия</span>
+                <span>По всему миру 🌍</span>
               </li>
             </ul>
           </div>
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-background/20 mt-8 pt-8 text-center text-background/70">
-          <p>© 2024 ЭкоОмск. Все права защищены. Сделано с 💚 для нашей планеты</p>
+          <p>© 2025 ЭкоМир. Все права защищены. Сделано с 💚 для нашей планеты</p>
         </div>
       </div>
     </footer>
