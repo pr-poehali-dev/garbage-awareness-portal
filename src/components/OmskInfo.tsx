@@ -37,26 +37,26 @@ const OmskInfo = () => {
   const ecoProblems = [
     {
       icon: 'Factory',
-      title: 'Промышленные выбросы',
-      description: 'Нефтеперерабатывающий завод, химические предприятия загрязняют воздух',
+      title: 'Заводы-дымовухи',
+      description: '150 заводов коптят небо. Но без них не будет работы, дилемма! 🤔',
       severity: 'high'
     },
     {
       icon: 'Trash2',
-      title: 'Проблема с мусором',
-      description: 'Ежегодно образуется ~400 тыс. тонн ТБО, недостаточная переработка',
+      title: 'Мусорная катастрофа',
+      description: '700 000 тонн мусора в год! Это 9 мусоровозов в МИНУТУ! 🚛💨',
       severity: 'high'
     },
     {
       icon: 'Droplets',
-      title: 'Загрязнение рек',
-      description: 'Иртыш и Омь страдают от промышленных и бытовых стоков',
+      title: 'Реки плачут',
+      description: 'Иртыш и Омь говорят: "Мы не помойка!" Давайте их послушаем? 😢',
       severity: 'medium'
     },
     {
       icon: 'TreePine',
-      title: 'Мало зелёных зон',
-      description: 'Дефицит парков и скверов в некоторых районах города',
+      title: 'Где деревья?',
+      description: 'В некоторых районах одно дерево на 100 человек. Очередь! 😅',
       severity: 'medium'
     }
   ];
@@ -64,71 +64,99 @@ const OmskInfo = () => {
   const ecoInitiatives = [
     {
       icon: 'Recycle',
-      title: 'Раздельный сбор',
-      description: 'Установлено 200+ контейнеров для раздельного сбора отходов',
+      title: 'Контейнеры-спасители',
+      description: '200+ штук по городу! Сортируй мусор, стань звездой! ⭐',
       status: 'active'
     },
     {
       icon: 'Wind',
-      title: 'Мониторинг воздуха',
-      description: 'Работают 12 станций контроля качества атмосферного воздуха',
+      title: 'Шпионы за воздухом',
+      description: '12 станций следят за тем, чем ты дышишь. Заботятся! 🕵️',
       status: 'active'
     },
     {
       icon: 'Leaf',
-      title: 'Озеленение',
-      description: 'Программа высадки 10 000 деревьев ежегодно',
+      title: 'Армия деревьев',
+      description: '10 000 деревьев в год высаживаем! Скоро будем как Амазонка! 🌴',
       status: 'progress'
     },
     {
       icon: 'Zap',
-      title: 'Эко-транспорт',
-      description: 'Закупка электробусов и развитие велоинфраструктуры',
+      title: 'Электробусы наступают',
+      description: 'Тихие, чистые, футуристичные! Будущее уже здесь! 🚌⚡',
       status: 'progress'
+    }
+  ];
+
+  const greenZones = [
+    {
+      name: 'Птичья гавань',
+      emoji: '🦆',
+      description: 'Природный парк где живёт 155 видов птиц! Настоящий птичий рай в центре города!'
+    },
+    {
+      name: 'Зелёный остров',
+      emoji: '🏝️',
+      description: 'Парк культуры и отдыха — твой оазис посреди городских джунглей!'
+    },
+    {
+      name: 'Парк 30-летия ВЛКСМ',
+      emoji: '🎡',
+      description: 'Парк с аттракционами и зелёными аллеями. Веселье + свежий воздух!'
+    },
+    {
+      name: 'Дендросад имени Гензе',
+      emoji: '🌲',
+      description: 'Ботанический рай! Тут 170 видов растений со всего мира!'
+    },
+    {
+      name: 'Парк «На Королёва»',
+      emoji: '🚀',
+      description: 'Космический парк для прогулок! Назван в честь Королёва — сам Гагарин одобрил бы!'
     }
   ];
 
   const ecoFacts = [
     {
       icon: 'Factory',
-      title: 'Промышленные предприятия',
-      value: '~150',
-      description: 'Основные загрязнители воздуха',
+      title: 'Заводов-монстров',
+      value: '~150 штук',
+      description: 'Дымят, коптят, но зарплаты дают 💰',
       impact: 'negative'
     },
     {
       icon: 'Waves',
-      title: 'Реки под угрозой',
-      value: '2 крупные',
-      description: 'Иртыш и Омь требуют очистки',
+      title: 'Иртыш и Омь',
+      value: '2 речки',
+      description: 'Просят помощи: "Не мусорьте, пожалуйста!" 🙏',
       impact: 'negative'
     },
     {
-      icon: 'Trees',
-      title: 'Зелёных насаждений',
-      value: '~2400 га',
-      description: 'Парки, скверы, лесопарки',
-      impact: 'positive'
+      icon: 'Trash2',
+      title: 'Мусора в год',
+      value: '700 000 тонн!',
+      description: 'Это как 140 000 слонов! 🐘🐘🐘',
+      impact: 'negative'
     },
     {
-      icon: 'Trash2',
-      title: 'Мусора ежегодно',
-      value: '400 тыс. тонн',
-      description: 'Перерабатывается менее 10%',
+      icon: 'Recycle',
+      title: 'Переработка',
+      value: 'Меньше 10%',
+      description: 'Есть куда расти! Помоги планете! 💪',
       impact: 'negative'
     },
     {
       icon: 'Container',
-      title: 'Контейнеров для раздельного сбора',
-      value: '200+',
-      description: 'Установлено по всему городу',
+      title: 'Эко-контейнеров',
+      value: '200+ штук',
+      description: 'Сортируй мусор — будь крутым! 😎',
       impact: 'positive'
     },
     {
       icon: 'Wind',
-      title: 'Качество воздуха',
+      title: 'Воздух такой...',
       value: 'ИЗА 8-12',
-      description: 'Индекс загрязнения атмосферы',
+      description: 'Не идеально, но можно дышать 😅',
       impact: 'negative'
     }
   ];
@@ -137,9 +165,9 @@ const OmskInfo = () => {
     <section className="py-20 bg-gradient-to-b from-blue-50 via-white to-emerald-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl font-bold mb-4">🏙️ Омск — город на стыке эпох</h2>
+          <h2 className="text-4xl font-bold mb-4">🏙️ Омск — где природа сражается с заводами!</h2>
           <p className="text-xl text-muted-foreground">
-            Промышленный центр Сибири с богатой историей и экологическими вызовами
+            Город контрастов: одной рукой строим заводы, другой сажаем деревья 🌳🏭
           </p>
         </div>
 
@@ -165,7 +193,7 @@ const OmskInfo = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-red-700">
                 <Icon name="AlertTriangle" size={28} />
-                Экологические проблемы
+                🚨 Эко-боссы которых надо победить
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -187,7 +215,7 @@ const OmskInfo = () => {
               ))}
               <div className="text-center pt-2">
                 <p className="text-sm font-semibold text-red-700">
-                  ⚠️ Омск входит в топ-15 самых загрязнённых городов России
+                  ⚠️ Омск в топ-15 самых загрязнённых! Но мы можем это изменить! 💪
                 </p>
               </div>
             </CardContent>
@@ -197,7 +225,7 @@ const OmskInfo = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-green-700">
                 <Icon name="Sparkles" size={28} />
-                Эко-инициативы города
+                ✨ Наша армия добра!
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -219,18 +247,48 @@ const OmskInfo = () => {
               ))}
               <div className="text-center pt-2">
                 <p className="text-sm font-semibold text-green-700">
-                  💚 Присоединяйся к эко-движению Омска!
+                  💚 Вместе мы сила! Присоединяйся к эко-движению! 🚀
                 </p>
               </div>
             </CardContent>
           </Card>
         </div>
 
+        <Card className="border-2 border-green-400 bg-gradient-to-br from-green-50 to-emerald-100 mb-12">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-green-700 text-center justify-center">
+              <Icon name="TreePine" size={28} />
+              🌳 Зелёные оазисы Омска
+            </CardTitle>
+            <p className="text-center text-muted-foreground mt-2">
+              Места где можно подышать и забыть про заводы!
+            </p>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+              {greenZones.map((zone, index) => (
+                <div key={index} className="p-4 bg-white rounded-lg border-2 border-green-300 hover:shadow-lg transition-shadow hover:scale-105">
+                  <div className="text-center">
+                    <div className="text-5xl mb-3 animate-bounce">{zone.emoji}</div>
+                    <h4 className="font-bold text-green-800 mb-2 text-lg">{zone.name}</h4>
+                    <p className="text-sm text-gray-700">{zone.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center p-4 bg-green-100 rounded-lg border-2 border-green-400">
+              <p className="font-bold text-green-800 text-lg">
+                🌿 Всего ~2400 гектаров зелени! Это как 3360 футбольных полей! ⚽
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
         <Card className="border-2 border-purple-300 bg-gradient-to-br from-purple-50 to-pink-50">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-purple-700 text-center justify-center">
               <Icon name="BarChart3" size={28} />
-              Экологическая статистика Омска
+              📊 Омская статистика (без фильтров!)
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -260,24 +318,31 @@ const OmskInfo = () => {
           </CardContent>
         </Card>
 
-        <div className="mt-12 p-6 bg-gradient-to-r from-emerald-100 to-blue-100 rounded-xl border-2 border-emerald-300 text-center">
-          <h3 className="text-2xl font-bold mb-3 text-gray-800">🌍 Омск может стать чище!</h3>
-          <p className="text-lg text-gray-700 mb-4">
-            Каждый житель может внести свой вклад в экологию города через переработку отходов и осознанное потребление
+        <div className="mt-12 p-8 bg-gradient-to-r from-yellow-100 via-orange-100 to-red-100 rounded-xl border-4 border-orange-400 text-center shadow-xl">
+          <div className="text-6xl mb-4 animate-bounce">🦸‍♂️</div>
+          <h3 className="text-3xl font-bold mb-3 text-gray-800">Стань эко-героем Омска!</h3>
+          <p className="text-xl text-gray-700 mb-6">
+            Даже супергерои начинали с малого. Твоя миссия — спасти город от мусора! 💪
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Badge className="text-lg px-4 py-2 bg-green-500 hover:bg-green-600">
-              ♻️ Сортируй мусор
+          <div className="flex flex-wrap justify-center gap-4">
+            <Badge className="text-lg px-6 py-3 bg-green-500 hover:bg-green-600 cursor-pointer hover:scale-110 transition-transform">
+              ♻️ Сортируй мусор (как босс!)
             </Badge>
-            <Badge className="text-lg px-4 py-2 bg-blue-500 hover:bg-blue-600">
-              🚴 Используй велосипед
+            <Badge className="text-lg px-6 py-3 bg-blue-500 hover:bg-blue-600 cursor-pointer hover:scale-110 transition-transform">
+              🚴 Велик вместо авто
             </Badge>
-            <Badge className="text-lg px-4 py-2 bg-purple-500 hover:bg-purple-600">
-              🌱 Сажай деревья
+            <Badge className="text-lg px-6 py-3 bg-purple-500 hover:bg-purple-600 cursor-pointer hover:scale-110 transition-transform">
+              🌱 Сажай деревья (прямо сейчас!)
             </Badge>
-            <Badge className="text-lg px-4 py-2 bg-orange-500 hover:bg-orange-600">
-              💡 Экономь энергию
+            <Badge className="text-lg px-6 py-3 bg-orange-500 hover:bg-orange-600 cursor-pointer hover:scale-110 transition-transform">
+              💡 Выключай свет (электричество дорогое!)
             </Badge>
+            <Badge className="text-lg px-6 py-3 bg-pink-500 hover:bg-pink-600 cursor-pointer hover:scale-110 transition-transform">
+              🛍️ Многоразовые пакеты (стильно!)
+            </Badge>
+          </div>
+          <div className="mt-6 text-lg font-bold text-orange-700">
+            🔥 700 000 тонн мусора не победят себя сами! ДЕЙСТВУЙ! 🔥
           </div>
         </div>
       </div>
