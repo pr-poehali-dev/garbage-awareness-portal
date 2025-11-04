@@ -110,8 +110,22 @@
   }
 }
 
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @layer utilities {
   .animate-spin-slow {
     animation: spin 8s linear infinite;
+  }
+  .animate-slide-in-right {
+    animation: slide-in-right 0.5s ease-out;
   }
 }
