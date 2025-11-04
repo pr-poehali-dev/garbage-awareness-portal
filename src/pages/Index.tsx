@@ -8,6 +8,7 @@ import TrashSortingGame from '@/components/TrashSortingGame';
 import AbsurdCalculator from '@/components/AbsurdCalculator';
 import GretaAssistant from '@/components/GretaAssistant';
 import PremiumEcoPass from '@/components/PremiumEcoPass';
+import FloatingLogo from '@/components/FloatingLogo';
 import ResourcesSection from '@/components/ResourcesSection';
 import Footer from '@/components/Footer';
 import AuthModal from '@/components/AuthModal';
@@ -51,6 +52,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      <FloatingLogo />
       <Header 
         onAuthClick={() => setShowAuthModal(true)} 
         user={user}

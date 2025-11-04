@@ -12,14 +12,14 @@ const PremiumEcoPass = () => {
   const [receiptSent, setReceiptSent] = useState(false);
 
   const premiumFeatures = [
-    { icon: "Sparkles", text: "Золотая аура 'Грета одобряет' в профиле", joke: "Сияй ярче солнечных батарей!" },
-    { icon: "Globe", text: "Личная голографическая планета", joke: "Твоя планета, твои правила!" },
-    { icon: "Zap", text: "Ускоренная эволюция тамагочи x2", joke: "От помойки до Эдема за 5 минут!" },
-    { icon: "Trophy", text: "VIP титул 'Спаситель Земли Premium'", joke: "Звучит дороже, чем ты заплатил!" },
-    { icon: "Heart", text: "Индульгенция на 100 пластиковых грехов", joke: "Пей из стаканчиков без зазрения совести!" },
-    { icon: "Ship", text: "Гарантированное место в Ноевом ковчеге 2.0", joke: "При экоапокалипсисе - ты в VIP-каюте!" },
-    { icon: "Star", text: "Эксклюзивный бейдж '♻️ ЭкоБог'", joke: "Даже Грета завидует!" },
-    { icon: "Crown", text: "Пожизненное право не сортировать мусор*", joke: "*шутка, конечно 😉" }
+    { icon: "Sparkles", text: "Золотая галочка в профиле", joke: "Как в Твиттере, только зелёнее!" },
+    { icon: "Globe", text: "Своя планета-питомец", joke: "Растёт в 2 раза быстрее. Читкод!" },
+    { icon: "Zap", text: "Бустер эко-очков x2", joke: "Как донат в игре, но для планеты!" },
+    { icon: "Trophy", text: "Звание 'ЭкоГерой Лвл 99'", joke: "Максималка прокачана!" },
+    { icon: "Heart", text: "Прощение 100 пластиковых стаканчиков", joke: "Пей кофе без угрызений!" },
+    { icon: "Ship", text: "Бронь в Ковчег при конце света", joke: "VIP-место у окна гарантировано!" },
+    { icon: "Star", text: "Значок '♻️ ЭкоБог'", joke: "Грета лайкнет все твои посты!" },
+    { icon: "Crown", text: "Право не сортировать мусор год*", joke: "*Нет, это нельзя 😂 Сортируй!" }
   ];
 
   const handleCopyCard = () => {
@@ -53,14 +53,14 @@ const PremiumEcoPass = () => {
             </div>
           </div>
           <CardTitle className="text-4xl font-bold bg-gradient-to-r from-yellow-600 via-orange-500 to-red-500 bg-clip-text text-transparent mb-2">
-            🎫 Премиум ЭкоПропуск в Рай
+            🎫 ЭкоПремиум Пропуск
           </CardTitle>
           <CardDescription className="text-xl text-gray-700 font-semibold">
-            Элитный клуб для тех, кто хочет индульгенцию за весь углеродный след! 
+            Купи прощение за все пакетики и стаканчики! 
           </CardDescription>
           <div className="mt-4 inline-block bg-red-100 border-2 border-red-400 rounded-lg px-4 py-2">
-            <p className="text-red-700 font-bold">⚡ АКЦИЯ: Всего 299₽!</p>
-            <p className="text-sm text-red-600">Обычная цена: ∞₽ (бесценно)</p>
+            <p className="text-red-700 font-bold">🔥 Суперцена: Только 50₽!</p>
+            <p className="text-sm text-red-600">Дешевле шаурмы!</p>
           </div>
         </CardHeader>
 
@@ -68,7 +68,7 @@ const PremiumEcoPass = () => {
           <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border-2 border-yellow-300">
             <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
               <Icon name="Crown" className="text-yellow-500" size={28} />
-              Что входит в Premium подписку:
+              Что получишь за 50 рублей:
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
               {premiumFeatures.map((feature, index) => (
@@ -94,19 +94,19 @@ const PremiumEcoPass = () => {
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
                 <Icon name="Check" className="text-green-600" size={20} />
-                <span className="text-gray-700">✅ Грета Тунберг не будет на тебя смотреть осуждающе (наверное)</span>
+                <span className="text-gray-700">✅ Грета перестанет на тебя злиться (наверное)</span>
               </li>
               <li className="flex items-center gap-2">
                 <Icon name="Check" className="text-green-600" size={20} />
-                <span className="text-gray-700">✅ Моральное право есть авокадо на тостах без угрызений</span>
+                <span className="text-gray-700">✅ Можно пить кофе из одноразовых без стыда</span>
               </li>
               <li className="flex items-center gap-2">
                 <Icon name="Check" className="text-green-600" size={20} />
-                <span className="text-gray-700">✅ Сертификат "Я спас планету" (виртуальный, экономим бумагу)</span>
+                <span className="text-gray-700">✅ Сертификат "Я молодец" (цифровой, береги деревья)</span>
               </li>
               <li className="flex items-center gap-2">
                 <Icon name="Check" className="text-green-600" size={20} />
-                <span className="text-gray-700">✅ Возврат денег: нет, но планета скажет спасибо!</span>
+                <span className="text-gray-700">✅ Возврат: нет, но зато карма +100500!</span>
               </li>
             </ul>
           </div>
@@ -118,10 +118,10 @@ const PremiumEcoPass = () => {
               className="text-xl px-12 py-6 bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 hover:from-yellow-600 hover:via-orange-600 hover:to-red-600 text-white font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all"
             >
               <Icon name="CreditCard" className="mr-2" size={28} />
-              Купить ЭкоИндульгенцию за 299₽
+              Купить за 50₽
             </Button>
             <p className="text-xs text-gray-500 mt-3 italic">
-              * Юридически не освобождает от ответственности за экологические преступления 😄
+              * Мусор всё равно нужно сортировать, но теперь с чистой совестью! 😄
             </p>
           </div>
         </CardContent>
@@ -144,7 +144,7 @@ const PremiumEcoPass = () => {
               <div className="bg-blue-50 p-4 rounded-lg border-2 border-blue-200">
                 <h4 className="font-bold mb-3 flex items-center gap-2">
                   <Icon name="ArrowRight" className="text-blue-600" size={20} />
-                  Шаг 1: Переведите 299₽
+                  Шаг 1: Переведите 50₽
                 </h4>
                 <div className="space-y-2">
                   <Label>Номер карты:</Label>
