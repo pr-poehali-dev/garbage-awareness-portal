@@ -88,36 +88,48 @@ const OmskInfo = () => {
     }
   ];
 
-  const attractions = [
+  const ecoFacts = [
     {
-      name: 'Успенский собор',
-      emoji: '⛪',
-      description: 'Крупнейший православный храм в Сибири'
+      icon: 'Factory',
+      title: 'Промышленные предприятия',
+      value: '~150',
+      description: 'Основные загрязнители воздуха',
+      impact: 'negative'
     },
     {
-      name: 'Иртышская набережная',
-      emoji: '🌊',
-      description: 'Главная прогулочная зона города'
+      icon: 'Waves',
+      title: 'Реки под угрозой',
+      value: '2 крупные',
+      description: 'Иртыш и Омь требуют очистки',
+      impact: 'negative'
     },
     {
-      name: 'Музей Врубеля',
-      emoji: '🎨',
-      description: 'Один из крупнейших художественных музеев Сибири'
+      icon: 'Trees',
+      title: 'Зелёных насаждений',
+      value: '~2400 га',
+      description: 'Парки, скверы, лесопарки',
+      impact: 'positive'
     },
     {
-      name: 'Любинский проспект',
-      emoji: '🏛️',
-      description: 'Историческая пешеходная улица'
+      icon: 'Trash2',
+      title: 'Мусора ежегодно',
+      value: '400 тыс. тонн',
+      description: 'Перерабатывается менее 10%',
+      impact: 'negative'
     },
     {
-      name: 'Театр драмы',
-      emoji: '🎭',
-      description: 'Старейший театр за Уралом (1874 г.)'
+      icon: 'Container',
+      title: 'Контейнеров для раздельного сбора',
+      value: '200+',
+      description: 'Установлено по всему городу',
+      impact: 'positive'
     },
     {
-      name: 'Парк Победы',
-      emoji: '🌳',
-      description: 'Крупнейший парк города с мемориалом'
+      icon: 'Wind',
+      title: 'Качество воздуха',
+      value: 'ИЗА 8-12',
+      description: 'Индекс загрязнения атмосферы',
+      impact: 'negative'
     }
   ];
 
@@ -214,20 +226,34 @@ const OmskInfo = () => {
           </Card>
         </div>
 
-        <Card className="border-2 border-blue-300 bg-gradient-to-br from-blue-50 to-purple-50">
+        <Card className="border-2 border-purple-300 bg-gradient-to-br from-purple-50 to-pink-50">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-blue-700 text-center justify-center">
-              <Icon name="Landmark" size={28} />
-              Достопримечательности Омска
+            <CardTitle className="flex items-center gap-2 text-purple-700 text-center justify-center">
+              <Icon name="BarChart3" size={28} />
+              Экологическая статистика Омска
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {attractions.map((place, index) => (
-                <div key={index} className="p-4 bg-white rounded-lg border-2 border-blue-200 hover:shadow-lg transition-shadow">
-                  <div className="text-4xl text-center mb-2">{place.emoji}</div>
-                  <h4 className="font-bold text-center text-blue-800 mb-1">{place.name}</h4>
-                  <p className="text-sm text-center text-gray-600">{place.description}</p>
+              {ecoFacts.map((fact, index) => (
+                <div key={index} className={`p-4 rounded-lg border-2 hover:shadow-lg transition-shadow ${
+                  fact.impact === 'positive' 
+                    ? 'bg-green-50 border-green-300' 
+                    : 'bg-red-50 border-red-300'
+                }`}>
+                  <div className="flex flex-col items-center text-center space-y-2">
+                    <Icon 
+                      name={fact.icon as any} 
+                      size={36} 
+                      className={fact.impact === 'positive' ? 'text-green-600' : 'text-red-600'} 
+                    />
+                    <div className="text-sm font-semibold opacity-80">{fact.title}</div>
+                    <div className="text-2xl font-bold">{fact.value}</div>
+                    <p className="text-xs opacity-70">{fact.description}</p>
+                    <Badge variant={fact.impact === 'positive' ? 'default' : 'destructive'}>
+                      {fact.impact === 'positive' ? '✅ Хорошо' : '⚠️ Проблема'}
+                    </Badge>
+                  </div>
                 </div>
               ))}
             </div>
