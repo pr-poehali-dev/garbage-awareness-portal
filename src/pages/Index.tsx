@@ -7,6 +7,7 @@ import EcoTamagotchi from '@/components/EcoTamagotchi';
 import TrashSortingGame from '@/components/TrashSortingGame';
 import AbsurdCalculator from '@/components/AbsurdCalculator';
 import GretaAssistant from '@/components/GretaAssistant';
+import PremiumEcoPass from '@/components/PremiumEcoPass';
 import ResourcesSection from '@/components/ResourcesSection';
 import Footer from '@/components/Footer';
 import AuthModal from '@/components/AuthModal';
@@ -72,6 +73,12 @@ const Index = () => {
             <AbsurdCalculator />
             <GretaAssistant />
           </div>
+        </div>
+      </section>
+
+      <section id="premium" className="py-20 bg-gradient-to-b from-emerald-50 to-yellow-50">
+        <div className="container mx-auto px-4">
+          <PremiumEcoPass />
         </div>
       </section>
       
