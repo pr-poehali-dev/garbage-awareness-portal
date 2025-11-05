@@ -53,7 +53,7 @@ const FloatingSchoolLogo = () => {
           key={index}
           src="https://cdn.poehali.dev/files/00350ec2-74b5-4140-91e9-ef9fa5ac1dee.png"
           alt="Логотип школы 55"
-          className="absolute transition-opacity duration-1000 hover:opacity-100"
+          className="absolute transition-opacity duration-1000 hover:opacity-100 mix-blend-multiply"
           style={{
             left: `${pos.x}px`,
             top: `${pos.y}px`,
@@ -62,6 +62,7 @@ const FloatingSchoolLogo = () => {
             opacity: 0.15,
             transform: `rotate(${index * 45}deg)`,
             animation: `float-${index} ${3 + index * 0.5}s ease-in-out infinite`,
+            filter: 'drop-shadow(0 0 10px rgba(128, 0, 128, 0.3))',
           }}
         />
       ))}
