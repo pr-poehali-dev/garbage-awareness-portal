@@ -8,6 +8,7 @@ import Leaderboard from '@/components/Leaderboard';
 import OmskMapImage from '@/components/OmskMapImage';
 import PrivateShop from '@/components/PrivateShop';
 import FloatingLogo from '@/components/FloatingLogo';
+import FloatingSchoolLogo from '@/components/FloatingSchoolLogo';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -40,6 +41,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       <FloatingLogo />
+      <FloatingSchoolLogo />
       <Header />
       <HeroSection wasteCounter={wasteCounter} recyclingPointsCount={recyclingPoints.length} />
       
