@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
+import OmskEcoFacts from '@/components/OmskEcoFacts';
 import MapSection from '@/components/MapSection';
 import TrashZodiac from '@/components/TrashZodiac';
 import FloatingLogo from '@/components/FloatingLogo';
@@ -38,6 +39,8 @@ const Index = () => {
       <FloatingLogo />
       <Header />
       <HeroSection wasteCounter={wasteCounter} recyclingPointsCount={recyclingPoints.length} />
+      
+      <OmskEcoFacts />
       
       <TrashZodiac />
       
