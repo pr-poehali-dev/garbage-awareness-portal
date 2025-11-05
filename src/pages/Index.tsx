@@ -4,7 +4,7 @@ import HeroSection from '@/components/HeroSection';
 import OmskEcoFacts from '@/components/OmskEcoFacts';
 import TrashComedySection from '@/components/TrashComedySection';
 import TrashBasketballGame from '@/components/TrashBasketballGame';
-import MapSection from '@/components/MapSection';
+import OmskMapImage from '@/components/OmskMapImage';
 import TrashZodiac from '@/components/TrashZodiac';
 import FloatingLogo from '@/components/FloatingLogo';
 import Footer from '@/components/Footer';
@@ -48,9 +48,9 @@ const Index = () => {
       
       <TrashBasketballGame />
       
-      <TrashZodiac />
+      <OmskMapImage recyclingPoints={recyclingPoints} />
       
-      <MapSection recyclingPoints={recyclingPoints} />
+      <TrashZodiac />
 
       <Footer />
     </div>

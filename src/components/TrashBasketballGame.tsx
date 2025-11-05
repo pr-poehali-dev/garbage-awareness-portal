@@ -153,6 +153,8 @@ const TrashBasketballGame = () => {
   const [balls, setBalls] = useState<any[]>([]);
   const [gameStarted, setGameStarted] = useState(false);
   const [bestScore, setBestScore] = useState(0);
+  const [difficulty, setDifficulty] = useState<'easy' | 'normal' | 'hard'>('normal');
+  const [shots, setShots] = useState(0);
   const ballIdCounter = useRef(0);
 
   useEffect(() => {
@@ -169,6 +171,7 @@ const TrashBasketballGame = () => {
 
   const shoot = () => {
     if (!gameStarted) setGameStarted(true);
+    setShots(prev => prev + 1);
 
     const rad = (angle * Math.PI) / 180;
     const powerFactor = power / 50;
@@ -192,7 +195,8 @@ const TrashBasketballGame = () => {
   };
 
   const handleScore = () => {
-    setScore(prev => prev + 1);
+    const points = difficulty === 'easy' ? 1 : difficulty === 'normal' ? 2 : 3;
+    setScore(prev => prev + points);
   };
 
   const handleMiss = () => {
@@ -201,8 +205,15 @@ const TrashBasketballGame = () => {
 
   const resetGame = () => {
     setScore(0);
+    setShots(0);
     setBalls([]);
     setGameStarted(false);
+  };
+
+  const difficultySettings = {
+    easy: { name: '🟢 ЛЕГКО', color: 'from-green-500 to-emerald-600', points: 1, desc: 'Широкая корзина, +1 очко' },
+    normal: { name: '🟡 НОРМАЛЬНО', color: 'from-yellow-500 to-orange-600', points: 2, desc: 'Обычная корзина, +2 очка' },
+    hard: { name: '🔴 СЛОЖНО', color: 'from-red-500 to-rose-600', points: 3, desc: 'Узкая корзина, +3 очка' }
   };
 
   const trashTypes = [
@@ -225,8 +236,27 @@ const TrashBasketballGame = () => {
           <h2 className="text-7xl font-black mb-6 text-white drop-shadow-2xl">
             🏀 МУСОРНЫЙ БАСКЕТБОЛ 3D
           </h2>
-          <p className="text-3xl text-white/90 font-bold mb-4">
+          <p className="text-3xl text-white/90 font-bold mb-6">
             Попади отходами в корзину! Спаси планету!
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-4">
+            {Object.entries(difficultySettings).map(([key, setting]) => (
+              <button
+                key={key}
+                onClick={() => setDifficulty(key as any)}
+                className={`px-6 py-3 rounded-xl font-black text-lg transition-all border-4 ${
+                  difficulty === key
+                    ? `bg-gradient-to-r ${setting.color} text-white border-white scale-110 shadow-2xl`
+                    : 'bg-white/20 text-white border-white/30 hover:bg-white/30'
+                }`}
+              >
+                {setting.name}
+              </button>
+            ))}
+          </div>
+          <p className="text-xl text-white/80">
+            {difficultySettings[difficulty].desc}
           </p>
         </div>
 
@@ -267,14 +297,24 @@ const TrashBasketballGame = () => {
               />
             </Canvas>
 
-            <div className="absolute bottom-4 left-4 right-4 flex justify-between">
+            <div className="absolute bottom-4 left-4 right-4 flex justify-between gap-2 flex-wrap">
               <div className="bg-white/20 backdrop-blur-lg px-4 py-2 rounded-full border-2 border-white/50">
                 <span className="text-white font-bold text-xl">Очки: {score}</span>
               </div>
+              <div className="bg-blue-400/90 backdrop-blur-lg px-4 py-2 rounded-full border-2 border-blue-500">
+                <span className="text-white font-bold text-xl">Броски: {shots}</span>
+              </div>
               <div className="bg-yellow-400/90 backdrop-blur-lg px-4 py-2 rounded-full border-2 border-yellow-500">
-                <span className="text-purple-900 font-black text-xl">🏆 Рекорд: {bestScore}</span>
+                <span className="text-purple-900 font-black text-xl">🏆 {bestScore}</span>
               </div>
             </div>
+            
+            <button
+              onClick={shoot}
+              className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white font-black text-2xl px-8 py-4 rounded-2xl border-4 border-white hover:scale-110 transition-transform shadow-2xl animate-pulse"
+            >
+              🚀 БРОСИТЬ!
+            </button>
           </Card>
 
           <div className="space-y-6">
