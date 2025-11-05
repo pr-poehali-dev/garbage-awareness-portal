@@ -32,10 +32,10 @@ const OmskMapImage = ({ recyclingPoints }: OmskMapImageProps) => {
     <section id="map-section" className="py-20 bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-7xl font-black mb-6 text-white drop-shadow-2xl">
+          <h2 className="text-4xl md:text-5xl font-black mb-4 text-white drop-shadow-2xl">
             🗺️ КАРТА ПУНКТОВ ПЕРЕРАБОТКИ
           </h2>
-          <p className="text-3xl text-white/90 font-bold">
+          <p className="text-xl md:text-2xl text-white/90 font-bold">
             Омск — {recyclingPoints.length} точек сбора вторсырья
           </p>
         </div>
@@ -131,7 +131,7 @@ const OmskMapImage = ({ recyclingPoints }: OmskMapImageProps) => {
                 </div>
                 
                 <div className="mt-4 text-center">
-                  <p className="text-2xl font-black text-gray-800">
+                  <p className="text-lg font-black text-gray-800">
                     🎯 Наведи курсор на точку, чтобы увидеть детали справа!
                   </p>
                 </div>
@@ -140,7 +140,7 @@ const OmskMapImage = ({ recyclingPoints }: OmskMapImageProps) => {
 
             <div className="space-y-4">
               <Card className="bg-gradient-to-br from-yellow-400 to-orange-500 border-4 border-white p-6 sticky top-4">
-                <h3 className="text-3xl font-black text-white mb-4 flex items-center gap-2">
+                <h3 className="text-2xl font-black text-white mb-4 flex items-center gap-2">
                   📍 ИНФОРМАЦИЯ
                 </h3>
                 
@@ -175,9 +175,14 @@ const OmskMapImage = ({ recyclingPoints }: OmskMapImageProps) => {
                         </div>
                       </div>
                       
-                      <button className="w-full mt-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-black py-3 rounded-xl hover:scale-105 transition-transform">
+                      <a 
+                        href={`https://yandex.ru/maps/?rtext=~${recyclingPoints[selectedPoint].lat},${recyclingPoints[selectedPoint].lng}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full mt-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-black py-3 rounded-xl hover:scale-105 transition-transform text-center"
+                      >
                         🧭 Построить маршрут
-                      </button>
+                      </a>
                     </div>
                   </div>
                 ) : (

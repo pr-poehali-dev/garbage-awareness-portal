@@ -14,7 +14,7 @@ const HeroSection = ({ wasteCounter, recyclingPointsCount }: HeroSectionProps) =
         <img 
           src="https://cdn.poehali.dev/projects/80d20a93-447f-4b97-8907-e004902ecd46/files/1a10056d-8b5b-4391-a4b4-0c8d420ada86.jpg"
           alt="Эко фон"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-40"
         />
       </div>
       <div className="container mx-auto px-4 relative z-10">
@@ -23,10 +23,10 @@ const HeroSection = ({ wasteCounter, recyclingPointsCount }: HeroSectionProps) =
             <Icon name="Sparkles" size={16} className="mr-1" />
             Экология начинается с каждого из нас
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
             Мусор вокруг нас
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8">
+          <p className="text-base md:text-lg text-muted-foreground mb-6">
             Узнай, как правильно сортировать мусор, найди пункт приёма и спаси планету! 🌍♻️
           </p>
           
@@ -36,7 +36,7 @@ const HeroSection = ({ wasteCounter, recyclingPointsCount }: HeroSectionProps) =
               <div className="text-4xl font-bold text-primary mb-2 animate-counter">
                 {wasteCounter.toLocaleString('ru-RU')}
               </div>
-              <p className="text-sm text-muted-foreground">тонн мусора производится в мире ежегодно</p>
+              <p className="text-xs text-muted-foreground">тонн мусора производится в мире ежегодно</p>
             </Card>
             
             <Card className="p-6 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-shadow animate-scale-in" style={{animationDelay: '0.1s'}}>
@@ -44,7 +44,7 @@ const HeroSection = ({ wasteCounter, recyclingPointsCount }: HeroSectionProps) =
               <div className="text-4xl font-bold text-secondary mb-2">
                 {recyclingPointsCount}
               </div>
-              <p className="text-sm text-muted-foreground">пунктов приёма вторсырья</p>
+              <p className="text-xs text-muted-foreground">пунктов приёма вторсырья</p>
             </Card>
             
             <Card className="p-6 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-shadow animate-scale-in" style={{animationDelay: '0.2s'}}>
@@ -52,7 +52,7 @@ const HeroSection = ({ wasteCounter, recyclingPointsCount }: HeroSectionProps) =
               <div className="text-4xl font-bold text-accent mb-2">
                 12%
               </div>
-              <p className="text-sm text-muted-foreground">мусора перерабатывается</p>
+              <p className="text-xs text-muted-foreground">мусора перерабатывается</p>
             </Card>
           </div>
         </div>

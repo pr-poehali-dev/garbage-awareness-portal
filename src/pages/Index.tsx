@@ -9,6 +9,7 @@ import OmskMapImage from '@/components/OmskMapImage';
 import PrivateShop from '@/components/PrivateShop';
 import FloatingLogo from '@/components/FloatingLogo';
 import FloatingSchoolLogo from '@/components/FloatingSchoolLogo';
+import TrashHoroscope from '@/components/TrashHoroscope';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -54,6 +55,8 @@ const Index = () => {
       <Leaderboard />
       
       <OmskMapImage recyclingPoints={recyclingPoints} />
+      
+      <TrashHoroscope />
       
       <PrivateShop />
 
