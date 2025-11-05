@@ -5,6 +5,7 @@ import OmskEcoFacts from '@/components/OmskEcoFacts';
 import TrashComedySection from '@/components/TrashComedySection';
 import TrashBasketballGame from '@/components/TrashBasketballGame';
 import TrashDetector from '@/components/TrashDetector';
+import Leaderboard from '@/components/Leaderboard';
 import OmskMapImage from '@/components/OmskMapImage';
 import TrashZodiac from '@/components/TrashZodiac';
 import FloatingLogo from '@/components/FloatingLogo';
@@ -44,6 +45,8 @@ const Index = () => {
       <HeroSection wasteCounter={wasteCounter} recyclingPointsCount={recyclingPoints.length} />
       
       <TrashDetector />
+      
+      <Leaderboard />
       
       <OmskEcoFacts />
       
