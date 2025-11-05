@@ -19,32 +19,15 @@ const Leaderboard = () => {
   const [selectedTab, setSelectedTab] = useState('schools');
 
   const schools: LeaderboardEntry[] = [
-    { rank: 1, name: 'Лицей №64', type: 'school', points: 15420, recycled: 2847, avatar: '🏫', achievement: '🏆 Чемпион Омска', district: 'Советский' },
-    { rank: 2, name: 'Гимназия №19', type: 'school', points: 14280, recycled: 2501, avatar: '🎓', achievement: '🥈 Эко-легенда', district: 'Центральный' },
-    { rank: 3, name: 'Школа №87', type: 'school', points: 13950, recycled: 2398, avatar: '📚', achievement: '🥉 Спаситель природы', district: 'Кировский' },
-    { rank: 4, name: 'Школа №55', type: 'school', points: 12100, recycled: 2156, avatar: '🏫', achievement: '⭐ Эко-герой', district: 'Октябрьский' },
-    { rank: 5, name: 'Лицей №25', type: 'school', points: 11450, recycled: 1989, avatar: '🎓', achievement: '💚 Защитник планеты', district: 'Ленинский' },
-    { rank: 6, name: 'Гимназия №88', type: 'school', points: 10890, recycled: 1847, avatar: '📚', achievement: '🌱 Эко-воин', district: 'Советский' },
-    { rank: 7, name: 'Школа №120', type: 'school', points: 9850, recycled: 1703, avatar: '🏫', achievement: '♻️ Рециклер-про', district: 'Центральный' },
-    { rank: 8, name: 'Школа №73', type: 'school', points: 8920, recycled: 1589, avatar: '📚', achievement: '🌿 Зелёный патруль', district: 'Кировский' }
+    { rank: 1, name: 'Твоя школа может быть здесь!', type: 'school', points: 0, recycled: 0, avatar: '🏫', achievement: '🌱 Начни первым', district: 'Омск' }
   ];
 
   const classes: LeaderboardEntry[] = [
-    { rank: 1, name: '11А, Лицей №64', type: 'class', points: 4820, recycled: 847, avatar: '🎯', achievement: '👑 Короли экологии', district: 'Советский' },
-    { rank: 2, name: '10Б, Гимназия №19', type: 'class', points: 4510, recycled: 798, avatar: '🎖️', achievement: '🔥 Огонь команды', district: 'Центральный' },
-    { rank: 3, name: '9В, Школа №87', type: 'class', points: 4120, recycled: 721, avatar: '⚡', achievement: '💪 Сила природы', district: 'Кировский' },
-    { rank: 4, name: '11Г, Школа №55', type: 'class', points: 3890, recycled: 689, avatar: '🚀', achievement: '🌟 Звёзды эко', district: 'Октябрьский' },
-    { rank: 5, name: '10А, Лицей №25', type: 'class', points: 3650, recycled: 634, avatar: '💎', achievement: '✨ Бриллианты', district: 'Ленинский' },
-    { rank: 6, name: '9Б, Гимназия №88', type: 'class', points: 3410, recycled: 598, avatar: '🎪', achievement: '🎨 Креативщики', district: 'Советский' }
+    { rank: 1, name: 'Твой класс может быть здесь!', type: 'class', points: 0, recycled: 0, avatar: '📚', achievement: '🌱 Начни первым', district: 'Омск' }
   ];
 
   const individuals: LeaderboardEntry[] = [
-    { rank: 1, name: 'Анастасия К.', type: 'individual', points: 1847, recycled: 342, avatar: '👑', achievement: '🦸‍♀️ Супергероиня', district: 'Лицей №64' },
-    { rank: 2, name: 'Даниил М.', type: 'individual', points: 1620, recycled: 298, avatar: '🏆', achievement: '⚔️ Воин экологии', district: 'Гимназия №19' },
-    { rank: 3, name: 'Мария С.', type: 'individual', points: 1510, recycled: 276, avatar: '💫', achievement: '🌸 Хранительница', district: 'Школа №87' },
-    { rank: 4, name: 'Артём П.', type: 'individual', points: 1380, recycled: 251, avatar: '🎯', achievement: '🎖️ Капитан', district: 'Школа №55' },
-    { rank: 5, name: 'Софья Л.', type: 'individual', points: 1290, recycled: 234, avatar: '✨', achievement: '🌟 Звезда', district: 'Лицей №25' },
-    { rank: 6, name: 'Максим Г.', type: 'individual', points: 1180, recycled: 217, avatar: '🚀', achievement: '💪 Силач', district: 'Гимназия №88' }
+    { rank: 1, name: 'Ты можешь быть здесь!', type: 'individual', points: 0, recycled: 0, avatar: '⭐', achievement: '🌱 Начни первым', district: 'Омск' }
   ];
 
   const getRankColor = (rank: number) => {
@@ -170,7 +153,7 @@ const Leaderboard = () => {
             <Card className="bg-gradient-to-br from-cyan-500 to-blue-500 border-4 border-white p-6 text-center hover:scale-105 transition-transform">
               <div className="text-5xl mb-3">👥</div>
               <h3 className="text-2xl font-black text-white mb-2">УЧАСТНИКОВ</h3>
-              <p className="text-5xl font-black text-white mb-1">{individuals.length}К+</p>
+              <p className="text-5xl font-black text-white mb-1">{individuals.length}</p>
               <p className="text-sm font-bold text-white/90">эко-героев Омска</p>
             </Card>
           </div>

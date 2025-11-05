@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-import OmskEcoFacts from '@/components/OmskEcoFacts';
-import TrashComedySection from '@/components/TrashComedySection';
-import TrashBasketballGame from '@/components/TrashBasketballGame';
+import ProblemSolution from '@/components/ProblemSolution';
 import TrashDetector from '@/components/TrashDetector';
 import Leaderboard from '@/components/Leaderboard';
 import OmskMapImage from '@/components/OmskMapImage';
-import TrashZodiac from '@/components/TrashZodiac';
+import TrashBasketballGame from '@/components/TrashBasketballGame';
 import FloatingLogo from '@/components/FloatingLogo';
 import Footer from '@/components/Footer';
 
@@ -44,19 +42,15 @@ const Index = () => {
       <Header />
       <HeroSection wasteCounter={wasteCounter} recyclingPointsCount={recyclingPoints.length} />
       
+      <ProblemSolution />
+      
       <TrashDetector />
       
       <Leaderboard />
       
-      <OmskEcoFacts />
-      
-      <TrashComedySection />
-      
-      <TrashBasketballGame />
-      
       <OmskMapImage recyclingPoints={recyclingPoints} />
       
-      <TrashZodiac />
+      <TrashBasketballGame />
 
       <Footer />
     </div>
