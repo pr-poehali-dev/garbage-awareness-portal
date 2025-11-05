@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Text3D, Center, Environment, Float } from '@react-three/drei';
+import { OrbitControls, Environment, Float } from '@react-three/drei';
 import * as THREE from 'three';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
@@ -129,14 +129,10 @@ const Background3D = () => {
 
 const Score3D = ({ score }: { score: number }) => {
   return (
-    <Center position={[0, 5, -5]}>
+    <group position={[0, 5, -5]}>
       <Float speed={2} rotationIntensity={0.2} floatIntensity={1}>
-        <Text3D
-          font="/fonts/helvetiker_bold.typeface.json"
-          size={0.8}
-          height={0.2}
-        >
-          {score}
+        <mesh>
+          <boxGeometry args={[2, 1, 0.3]} />
           <meshStandardMaterial
             color="#ff00ff"
             metalness={0.8}
@@ -144,9 +140,9 @@ const Score3D = ({ score }: { score: number }) => {
             emissive="#ff00ff"
             emissiveIntensity={0.5}
           />
-        </Text3D>
+        </mesh>
       </Float>
-    </Center>
+    </group>
   );
 };
 
