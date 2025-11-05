@@ -3,9 +3,9 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ProblemSolution from '@/components/ProblemSolution';
 import TrashDetector from '@/components/TrashDetector';
+import ImpactCalculator from '@/components/ImpactCalculator';
 import Leaderboard from '@/components/Leaderboard';
 import OmskMapImage from '@/components/OmskMapImage';
-import TrashBasketballGame from '@/components/TrashBasketballGame';
 import FloatingLogo from '@/components/FloatingLogo';
 import Footer from '@/components/Footer';
 
@@ -46,11 +46,11 @@ const Index = () => {
       
       <TrashDetector />
       
+      <ImpactCalculator />
+      
       <Leaderboard />
       
       <OmskMapImage recyclingPoints={recyclingPoints} />
-      
-      <TrashBasketballGame />
 
       <Footer />
     </div>
