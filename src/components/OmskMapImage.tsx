@@ -29,7 +29,7 @@ const OmskMapImage = ({ recyclingPoints }: OmskMapImageProps) => {
   });
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900">
+    <section id="map-section" className="py-20 bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-7xl font-black mb-6 text-white drop-shadow-2xl">
