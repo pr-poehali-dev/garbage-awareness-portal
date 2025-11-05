@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -17,6 +17,10 @@ interface TourPoint {
 const VirtualDumpTour = () => {
   const [currentPoint, setCurrentPoint] = useState(0);
   const [rotation, setRotation] = useState(0);
+  const [arMode, setArMode] = useState(false);
+  const [stream, setStream] = useState<MediaStream | null>(null);
+  const [cameraError, setCameraError] = useState('');
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const tourPoints: TourPoint[] = [
     {
@@ -143,6 +147,45 @@ const VirtualDumpTour = () => {
     setRotation(0);
   };
 
+  const startAR = async () => {
+    try {
+      setCameraError('');
+      const mediaStream = await navigator.mediaDevices.getUserMedia({
+        video: { 
+          facingMode: 'environment',
+          width: { ideal: 1280 },
+          height: { ideal: 720 }
+        }
+      });
+      
+      setStream(mediaStream);
+      setArMode(true);
+      
+      if (videoRef.current) {
+        videoRef.current.srcObject = mediaStream;
+      }
+    } catch (error) {
+      console.error('Ошибка доступа к камере:', error);
+      setCameraError('Не удалось получить доступ к камере. Разрешите доступ в настройках браузера.');
+    }
+  };
+
+  const stopAR = () => {
+    if (stream) {
+      stream.getTracks().forEach(track => track.stop());
+      setStream(null);
+    }
+    setArMode(false);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (stream) {
+        stream.getTracks().forEach(track => track.stop());
+      }
+    };
+  }, [stream]);
+
   const point = tourPoints[currentPoint];
 
   return (
@@ -155,9 +198,43 @@ const VirtualDumpTour = () => {
           <p className="text-2xl text-gray-300 mb-4">
             Увидь масштаб проблемы собственными глазами
           </p>
-          <Badge className="text-xl px-6 py-3 bg-red-600 text-white animate-pulse">
-            ⚠️ Осторожно: реальность шокирует
-          </Badge>
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
+            <Badge className="text-xl px-6 py-3 bg-red-600 text-white animate-pulse">
+              ⚠️ Осторожно: реальность шокирует
+            </Badge>
+            {!arMode && (
+              <Button
+                onClick={startAR}
+                className="text-xl px-8 py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold animate-pulse shadow-2xl border-2 border-white"
+                size="lg"
+              >
+                <Icon name="Camera" size={28} className="mr-3" />
+                📱 ВКЛЮЧИТЬ AR-РЕЖИМ
+              </Button>
+            )}
+            {arMode && (
+              <Button
+                onClick={stopAR}
+                className="text-xl px-8 py-6 bg-red-600 hover:bg-red-700 text-white font-bold"
+                size="lg"
+              >
+                <Icon name="X" size={28} className="mr-3" />
+                Выключить AR
+              </Button>
+            )}
+          </div>
+          {cameraError && (
+            <div className="bg-red-500/20 border-2 border-red-500 rounded-xl p-4 max-w-2xl mx-auto">
+              <p className="text-red-300">{cameraError}</p>
+            </div>
+          )}
+          {arMode && (
+            <div className="bg-purple-500/20 border-2 border-purple-500 rounded-xl p-4 max-w-2xl mx-auto animate-pulse">
+              <p className="text-purple-300 text-lg">
+                📱 <strong>AR-РЕЖИМ АКТИВЕН!</strong> Наведи камеру на ровную поверхность (стол, пол) и увидишь мини-свалку в твоём пространстве!
+              </p>
+            </div>
+          )}
         </div>
 
         <Card className={`border-4 border-red-500 bg-gradient-to-br ${point.color} shadow-2xl mb-8 overflow-hidden`}>
@@ -191,22 +268,66 @@ const VirtualDumpTour = () => {
 
           <CardContent className="p-8">
             <div className="mb-8 relative">
-              <div 
-                className="w-full h-96 bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl border-4 border-white/30 overflow-hidden relative transition-transform duration-500"
-                style={{ transform: `perspective(1000px) rotateY(${rotation}deg)` }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent animate-pulse"></div>
-                
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="text-9xl mb-6 drop-shadow-2xl">{point.emoji}</div>
-                    <div className="text-4xl font-bold drop-shadow-lg mb-4">{point.name}</div>
-                    <div className="text-lg opacity-75">Вращай камеру для осмотра</div>
+              {!arMode ? (
+                <div 
+                  className="w-full h-96 bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl border-4 border-white/30 overflow-hidden relative transition-transform duration-500"
+                  style={{ transform: `perspective(1000px) rotateY(${rotation}deg)` }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent animate-pulse"></div>
+                  
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <div className="text-9xl mb-6 drop-shadow-2xl">{point.emoji}</div>
+                      <div className="text-4xl font-bold drop-shadow-lg mb-4">{point.name}</div>
+                      <div className="text-lg opacity-75">Вращай камеру для осмотра</div>
+                    </div>
+                  </div>
+
+                  <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 to-transparent"></div>
+                </div>
+              ) : (
+                <div className="relative w-full h-96 rounded-2xl border-4 border-purple-500 overflow-hidden">
+                  <video
+                    ref={videoRef}
+                    autoPlay
+                    playsInline
+                    muted
+                    className="w-full h-full object-cover"
+                  />
+                  
+                  <div 
+                    className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                    style={{ 
+                      transform: `perspective(800px) rotateY(${rotation}deg) rotateX(${Math.sin(rotation / 180 * Math.PI) * 10}deg)`,
+                      transition: 'transform 0.5s ease-out'
+                    }}
+                  >
+                    <div className="relative">
+                      <div className="text-8xl drop-shadow-2xl filter brightness-110 animate-float">
+                        {point.emoji}
+                      </div>
+                      
+                      <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-4 bg-black/50 rounded-full blur-xl"></div>
+                      
+                      <div className="absolute top-0 right-0 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                        AR
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="absolute top-4 left-4 bg-black/70 backdrop-blur px-4 py-2 rounded-full text-sm border-2 border-purple-500">
+                    <Icon name="Camera" size={16} className="inline mr-2" />
+                    AR активен
+                  </div>
+
+                  <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur p-4 rounded-xl border-2 border-purple-500">
+                    <p className="text-center text-sm">
+                      🎯 Объект расположен в вашем пространстве<br />
+                      Поверни телефон, чтобы осмотреть со всех сторон
+                    </p>
                   </div>
                 </div>
-
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 to-transparent"></div>
-              </div>
+              )}
 
               <div className="flex justify-center gap-4 mt-6">
                 <Button
@@ -324,6 +445,16 @@ const VirtualDumpTour = () => {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };
