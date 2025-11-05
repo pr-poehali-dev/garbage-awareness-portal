@@ -125,7 +125,7 @@ const ImpactCalculator = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-600 via-indigo-700 to-blue-800 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-emerald-50 via-green-100 to-emerald-50 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_50px,rgba(255,255,255,0.05)_50px,rgba(255,255,255,0.05)_100px)]"></div>
       </div>
@@ -133,10 +133,10 @@ const ImpactCalculator = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <div className="text-8xl mb-6">🧮🌍💡</div>
-          <h2 className="text-7xl font-black mb-6 text-white drop-shadow-2xl">
+          <h2 className="text-7xl font-black mb-6 text-gray-900 drop-shadow-2xl">
             КАЛЬКУЛЯТОР ЭКОСЛЕДА
           </h2>
-          <p className="text-3xl text-white/95 font-bold max-w-5xl mx-auto">
+          <p className="text-3xl text-gray-800 font-bold max-w-5xl mx-auto">
             Узнай, какой вклад ТЫ и весь ОМСК делаете в спасение планеты!
           </p>
         </div>

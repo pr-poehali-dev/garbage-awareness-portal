@@ -118,7 +118,7 @@ const Leaderboard = () => {
   );
 
   return (
-    <section className="py-20 bg-gradient-to-br from-emerald-500 via-green-600 to-teal-700 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-white via-emerald-50 to-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.1)_10px,rgba(255,255,255,0.1)_20px)]"></div>
       </div>
@@ -126,10 +126,10 @@ const Leaderboard = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 animate-fade-in">
           <div className="text-8xl mb-6 animate-bounce">🏆🌍📊</div>
-          <h2 className="text-7xl font-black mb-6 text-white drop-shadow-2xl">
+          <h2 className="text-7xl font-black mb-6 text-gray-900 drop-shadow-2xl">
             ТАБЛИЦА ЛИДЕРОВ ОМСКА
           </h2>
-          <p className="text-3xl text-white/95 font-bold max-w-4xl mx-auto">
+          <p className="text-3xl text-gray-800 font-bold max-w-4xl mx-auto">
             Соревнуйся со школами, классами и учениками! Кто больше спасёт планету?
           </p>
         </div>

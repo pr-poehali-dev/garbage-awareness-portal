@@ -119,7 +119,7 @@ const PrivateShop = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-emerald-700 via-green-800 to-teal-900 relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[repeating-linear-gradient(90deg,transparent,transparent_50px,rgba(255,255,255,0.1)_50px,rgba(255,255,255,0.1)_100px)]"></div>
       </div>
