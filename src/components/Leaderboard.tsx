@@ -19,7 +19,7 @@ const Leaderboard = () => {
   const [selectedTab, setSelectedTab] = useState('schools');
 
   const schools: LeaderboardEntry[] = [
-    { rank: 1, name: 'Твоя школа может быть здесь!', type: 'school', points: 0, recycled: 0, avatar: '🏫', achievement: '🌱 Начни первым', district: 'Омск' }
+    { rank: 1, name: 'Таврическая школа', type: 'school', points: 3500, recycled: 450, avatar: '🏫', achievement: '🌟 Эко-лидер области', district: 'Омская область' }
   ];
 
   const classes: LeaderboardEntry[] = [
@@ -27,7 +27,12 @@ const Leaderboard = () => {
   ];
 
   const individuals: LeaderboardEntry[] = [
-    { rank: 1, name: 'Ты можешь быть здесь!', type: 'individual', points: 0, recycled: 0, avatar: '⭐', achievement: '🌱 Начни первым', district: 'Омск' }
+    { rank: 1, name: 'Бабкин Артем', type: 'individual', points: 850, recycled: 95, avatar: '👨', achievement: '🏆 Топ по баллам', district: 'Таврическая школа' },
+    { rank: 2, name: 'Бабкина Софья', type: 'individual', points: 780, recycled: 88, avatar: '👧', achievement: '⭐ Эко-звезда', district: 'Таврическая школа' },
+    { rank: 3, name: 'Бояркина Софья', type: 'individual', points: 720, recycled: 82, avatar: '👧', achievement: '🌱 Природный лидер', district: 'Таврическая школа' },
+    { rank: 4, name: 'Артамонова Дарья', type: 'individual', points: 650, recycled: 75, avatar: '👧', achievement: '♻️ Мастер сортировки', district: 'Таврическая школа' },
+    { rank: 5, name: 'Коваленко Вероника', type: 'individual', points: 590, recycled: 68, avatar: '👧', achievement: '💚 Эко-герой', district: 'Таврическая школа' },
+    { rank: 6, name: 'Профотилова Елизавета', type: 'individual', points: 520, recycled: 61, avatar: '👧', achievement: '🌍 Планета в сердце', district: 'Таврическая школа' }
   ];
 
   const getRankColor = (rank: number) => {
@@ -126,11 +131,11 @@ const Leaderboard = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 animate-fade-in">
           <div className="text-8xl mb-6 animate-bounce">🏆🌍📊</div>
-          <h2 className="text-7xl font-black mb-6 text-gray-900 drop-shadow-2xl">
+          <h2 className="text-5xl md:text-6xl font-black mb-4 text-gray-900 drop-shadow-2xl">
             ТАБЛИЦА ЛИДЕРОВ ОМСКА
           </h2>
-          <p className="text-3xl text-gray-800 font-bold max-w-4xl mx-auto">
-            Соревнуйся со школами, классами и учениками! Кто больше спасёт планету?
+          <p className="text-xl md:text-2xl text-gray-800 font-bold max-w-4xl mx-auto">
+            Соревнуйся со школами, классами и учениками!
           </p>
         </div>
 

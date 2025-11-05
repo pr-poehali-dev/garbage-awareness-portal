@@ -23,11 +23,11 @@ const HeroSection = ({ wasteCounter, recyclingPointsCount }: HeroSectionProps) =
             <Icon name="Sparkles" size={16} className="mr-1" />
             Экология начинается с каждого из нас
           </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
             Мусор вокруг нас
           </h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Глобальная платформа для решения проблемы отходов. Узнай, как правильно сортировать мусор, найди ближайший пункт приёма и стань частью экологического движения! Вместе мы можем спасти нашу планету! 🌍♻️
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            Узнай, как правильно сортировать мусор, найди пункт приёма и спаси планету! 🌍♻️
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">

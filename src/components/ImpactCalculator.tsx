@@ -133,11 +133,11 @@ const ImpactCalculator = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <div className="text-8xl mb-6">🧮🌍💡</div>
-          <h2 className="text-7xl font-black mb-6 text-gray-900 drop-shadow-2xl">
+          <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900 drop-shadow-2xl">
             КАЛЬКУЛЯТОР ЭКОСЛЕДА
           </h2>
-          <p className="text-3xl text-gray-800 font-bold max-w-5xl mx-auto">
-            Узнай, какой вклад ТЫ и весь ОМСК делаете в спасение планеты!
+          <p className="text-xl md:text-2xl text-gray-800 font-bold max-w-5xl mx-auto">
+            Узнай свой вклад в спасение планеты!
           </p>
         </div>
 
