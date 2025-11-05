@@ -13,6 +13,7 @@ import EcoAchievements from '@/components/EcoAchievements';
 import EcoBossBattle from '@/components/EcoBossBattle';
 import OmskInfo from '@/components/OmskInfo';
 import BeforeAfterGallery from '@/components/BeforeAfterGallery';
+import VirtualDumpTour from '@/components/VirtualDumpTour';
 import ResourcesSection from '@/components/ResourcesSection';
 import Footer from '@/components/Footer';
 import AuthModal from '@/components/AuthModal';
@@ -72,6 +73,7 @@ const Index = () => {
       <HeroSection wasteCounter={wasteCounter} recyclingPointsCount={recyclingPoints.length} />
       <OmskInfo />
       <BeforeAfterGallery />
+      <VirtualDumpTour />
       <SolutionsSection />
       <MapSection recyclingPoints={recyclingPoints} />
       
