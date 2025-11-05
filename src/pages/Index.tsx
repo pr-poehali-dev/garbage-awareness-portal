@@ -6,6 +6,7 @@ import TrashDetector from '@/components/TrashDetector';
 import ImpactCalculator from '@/components/ImpactCalculator';
 import Leaderboard from '@/components/Leaderboard';
 import OmskMapImage from '@/components/OmskMapImage';
+import PrivateShop from '@/components/PrivateShop';
 import FloatingLogo from '@/components/FloatingLogo';
 import Footer from '@/components/Footer';
 
@@ -51,6 +52,8 @@ const Index = () => {
       <Leaderboard />
       
       <OmskMapImage recyclingPoints={recyclingPoints} />
+      
+      <PrivateShop />
 
       <Footer />
     </div>
