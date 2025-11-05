@@ -1,24 +1,13 @@
 import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-import SolutionsSection from '@/components/SolutionsSection';
 import MapSection from '@/components/MapSection';
 import TrashZodiac from '@/components/TrashZodiac';
 import FloatingLogo from '@/components/FloatingLogo';
-import OmskInfo from '@/components/OmskInfo';
-import BeforeAfterGallery from '@/components/BeforeAfterGallery';
-import VirtualDumpTour from '@/components/VirtualDumpTour';
-import ResourcesSection from '@/components/ResourcesSection';
 import Footer from '@/components/Footer';
-import AuthModal from '@/components/AuthModal';
-import ProfileModal from '@/components/ProfileModal';
 
 const Index = () => {
   const [wasteCounter, setWasteCounter] = useState(8547320);
-  const [ecoScore, setEcoScore] = useState(0);
-  const [showAuthModal, setShowAuthModal] = useState(false);
-  const [showProfileModal, setShowProfileModal] = useState(false);
-  const [user, setUser] = useState<{ name: string; email: string } | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,53 +31,19 @@ const Index = () => {
     { name: 'ЧистоГрад', address: 'Омск, ул. Фрунзе, 72', types: ['стекло', 'бумага', 'картон'], lat: 54.9801, lng: 73.3598 }
   ];
 
-  const handleScoreUpdate = (points: number) => {
-    setEcoScore(prev => prev + points);
-  };
 
-  const handleLogin = (email: string, name: string) => {
-    setUser({ email, name });
-    setShowAuthModal(false);
-  };
-
-  const handleLogout = () => {
-    setUser(null);
-    setEcoScore(0);
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       <FloatingLogo />
-      <Header 
-        onAuthClick={() => setShowAuthModal(true)} 
-        user={user}
-        onProfileClick={() => setShowProfileModal(true)}
-      />
+      <Header />
       <HeroSection wasteCounter={wasteCounter} recyclingPointsCount={recyclingPoints.length} />
-      <OmskInfo />
-      <BeforeAfterGallery />
-      <VirtualDumpTour />
-      <SolutionsSection />
-      <MapSection recyclingPoints={recyclingPoints} />
       
       <TrashZodiac />
+      
+      <MapSection recyclingPoints={recyclingPoints} />
 
-      <ResourcesSection />
       <Footer />
-      
-      <AuthModal 
-        open={showAuthModal} 
-        onClose={() => setShowAuthModal(false)}
-        onLogin={handleLogin}
-      />
-      
-      <ProfileModal
-        open={showProfileModal}
-        onClose={() => setShowProfileModal(false)}
-        user={user}
-        quizScore={ecoScore}
-        onLogout={handleLogout}
-      />
     </div>
   );
 };
