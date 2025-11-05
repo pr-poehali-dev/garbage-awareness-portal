@@ -10,6 +10,7 @@ import PrivateShop from '@/components/PrivateShop';
 import FloatingLogo from '@/components/FloatingLogo';
 import FloatingSchoolLogo from '@/components/FloatingSchoolLogo';
 import TrashHoroscope from '@/components/TrashHoroscope';
+import SolutionInfo from '@/components/SolutionInfo';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -47,6 +48,8 @@ const Index = () => {
       <HeroSection wasteCounter={wasteCounter} recyclingPointsCount={recyclingPoints.length} />
       
       <ProblemSolution />
+      
+      <SolutionInfo />
       
       <TrashDetector />
       
