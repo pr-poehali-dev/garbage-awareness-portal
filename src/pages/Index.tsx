@@ -12,6 +12,7 @@ import FloatingLogo from '@/components/FloatingLogo';
 import EcoAchievements from '@/components/EcoAchievements';
 import EcoBossBattle from '@/components/EcoBossBattle';
 import OmskInfo from '@/components/OmskInfo';
+import BeforeAfterGallery from '@/components/BeforeAfterGallery';
 import ResourcesSection from '@/components/ResourcesSection';
 import Footer from '@/components/Footer';
 import AuthModal from '@/components/AuthModal';
@@ -70,6 +71,7 @@ const Index = () => {
       />
       <HeroSection wasteCounter={wasteCounter} recyclingPointsCount={recyclingPoints.length} />
       <OmskInfo />
+      <BeforeAfterGallery />
       <SolutionsSection />
       <MapSection recyclingPoints={recyclingPoints} />
       
