@@ -3,10 +3,8 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import SolutionsSection from '@/components/SolutionsSection';
 import MapSection from '@/components/MapSection';
-import EcoTamagotchi from '@/components/EcoTamagotchi';
-import GretaAssistant from '@/components/GretaAssistant';
+import TrashZodiac from '@/components/TrashZodiac';
 import FloatingLogo from '@/components/FloatingLogo';
-import EcoBossBattle from '@/components/EcoBossBattle';
 import OmskInfo from '@/components/OmskInfo';
 import BeforeAfterGallery from '@/components/BeforeAfterGallery';
 import VirtualDumpTour from '@/components/VirtualDumpTour';
@@ -73,20 +71,7 @@ const Index = () => {
       <SolutionsSection />
       <MapSection recyclingPoints={recyclingPoints} />
       
-      <section id="interactive" className="py-20 bg-gradient-to-b from-white to-emerald-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl font-bold mb-4">🎮 Интерактивная зона</h2>
-            <p className="text-xl text-muted-foreground">Играй, учись и спасай планету с удовольствием!</p>
-          </div>
-          
-          <div className="space-y-12">
-            <EcoTamagotchi onLevelUp={handleScoreUpdate} />
-            <EcoBossBattle onVictory={handleScoreUpdate} />
-            <GretaAssistant />
-          </div>
-        </div>
-      </section>
+      <TrashZodiac />
 
       <ResourcesSection />
       <Footer />
