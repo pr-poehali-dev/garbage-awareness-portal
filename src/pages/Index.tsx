@@ -4,12 +4,8 @@ import HeroSection from '@/components/HeroSection';
 import SolutionsSection from '@/components/SolutionsSection';
 import MapSection from '@/components/MapSection';
 import EcoTamagotchi from '@/components/EcoTamagotchi';
-import TrashSortingGame from '@/components/TrashSortingGame';
-import GoodImpactCalculator from '@/components/GoodImpactCalculator';
 import GretaAssistant from '@/components/GretaAssistant';
-import PremiumEcoPass from '@/components/PremiumEcoPass';
 import FloatingLogo from '@/components/FloatingLogo';
-import EcoAchievements from '@/components/EcoAchievements';
 import EcoBossBattle from '@/components/EcoBossBattle';
 import OmskInfo from '@/components/OmskInfo';
 import BeforeAfterGallery from '@/components/BeforeAfterGallery';
@@ -86,26 +82,12 @@ const Index = () => {
           
           <div className="space-y-12">
             <EcoTamagotchi onLevelUp={handleScoreUpdate} />
-            <TrashSortingGame onScore={handleScoreUpdate} />
             <EcoBossBattle onVictory={handleScoreUpdate} />
-            <GoodImpactCalculator />
             <GretaAssistant />
           </div>
         </div>
       </section>
 
-      <section id="achievements" className="py-20 bg-gradient-to-b from-emerald-50 to-purple-50">
-        <div className="container mx-auto px-4">
-          <EcoAchievements ecoScore={ecoScore} />
-        </div>
-      </section>
-
-      <section id="premium" className="py-20 bg-gradient-to-b from-purple-50 to-yellow-50">
-        <div className="container mx-auto px-4">
-          <PremiumEcoPass />
-        </div>
-      </section>
-      
       <ResourcesSection />
       <Footer />
       
