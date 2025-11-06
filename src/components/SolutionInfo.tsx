@@ -142,6 +142,42 @@ const SolutionInfo = () => {
             </div>
           </Card>
 
+          <Card className="bg-gradient-to-br from-pink-100 to-purple-100 border-4 border-pink-500 p-8">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="text-5xl">🎬</div>
+              <h3 className="text-3xl font-black text-gray-900">СМОТРИ И УЧИСЬ СОРТИРОВАТЬ!</h3>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <div className="text-center mb-4">
+                  <p className="text-xl font-bold text-gray-800 mb-2">
+                    🤣 Смешной ролик про сортировку мусора
+                  </p>
+                  <p className="text-gray-600">
+                    Посмотри, как люди весело и креативно показывают важность раздельного сбора!
+                  </p>
+                </div>
+                
+                <div className="relative w-full" style={{paddingBottom: '56.25%'}}>
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl"
+                    src="https://www.youtube.com/embed/iWq9LYOzKlU"
+                    title="Смешное видео про сортировку мусора"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                
+                <div className="mt-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
+                  <p className="text-center text-gray-700 font-bold">
+                    💡 Главное — начать! Даже маленький шаг к раздельному сбору — это огромный вклад в будущее планеты! 🌍
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Card>
+
           <Card className="bg-white border-4 border-purple-500 p-8">
             <div className="flex items-center gap-4 mb-6">
               <div className="text-5xl">🏘️</div>
