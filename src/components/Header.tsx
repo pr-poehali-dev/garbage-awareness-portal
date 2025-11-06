@@ -1,3 +1,5 @@
+import OnlineCounter from '@/components/OnlineCounter';
+
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-emerald-200">
@@ -19,7 +21,8 @@ const Header = () => {
             <div className="text-xs font-bold text-emerald-600">Омск за экологию</div>
           </div>
         </div>
-        <div className="hidden md:flex gap-6">
+        <div className="hidden md:flex gap-6 items-center">
+          <OnlineCounter />
           <a href="#hero" className="text-foreground hover:text-primary transition-all duration-300 font-semibold hover:scale-110 inline-block">Главная</a>
           <a href="#detector-section" className="text-foreground hover:text-primary transition-all duration-300 font-semibold hover:scale-110 inline-block">ИИ-Детектор</a>
           <a href="#map" className="text-foreground hover:text-primary transition-all duration-300 font-semibold hover:scale-110 inline-block">Карта</a>
