@@ -145,28 +145,44 @@ const SolutionInfo = () => {
           <Card className="bg-gradient-to-br from-pink-100 to-purple-100 border-4 border-pink-500 p-8">
             <div className="flex items-center gap-4 mb-6">
               <div className="text-5xl">🎬</div>
-              <h3 className="text-3xl font-black text-gray-900">СМОТРИ И УЧИСЬ СОРТИРОВАТЬ!</h3>
+              <h3 className="text-3xl font-black text-gray-900">КАК СОРТИРОВАТЬ МУСОР</h3>
             </div>
             
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="text-center mb-4">
+                <div className="text-center mb-6">
                   <p className="text-xl font-bold text-gray-800 mb-2">
-                    🤣 Смешной ролик про сортировку мусора
+                    🎯 Простые правила сортировки
                   </p>
                   <p className="text-gray-600">
-                    Посмотри, как люди весело и креативно показывают важность раздельного сбора!
+                    Следуй этим шагам — и ты уже эковоин!
                   </p>
                 </div>
                 
-                <div className="relative w-full" style={{paddingBottom: '56.25%'}}>
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl"
-                    src="https://www.youtube.com/embed/iWq9LYOzKlU"
-                    title="Смешное видео про сортировку мусора"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer">
+                    <div className="text-5xl mb-3 text-center">1️⃣</div>
+                    <h4 className="text-lg font-black text-blue-900 mb-2 text-center">СПОЛОСНИ</h4>
+                    <p className="text-gray-700 text-center">Промой бутылку или банку водой, чтоб не осталось еды</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer">
+                    <div className="text-5xl mb-3 text-center">2️⃣</div>
+                    <h4 className="text-lg font-black text-green-900 mb-2 text-center">СНИМИ ЭТИКЕТКУ</h4>
+                    <p className="text-gray-700 text-center">Убери лишнее — бумажки, плёнку, крышки в отдельный пакет</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer">
+                    <div className="text-5xl mb-3 text-center">3️⃣</div>
+                    <h4 className="text-lg font-black text-purple-900 mb-2 text-center">СОМНИ</h4>
+                    <p className="text-gray-700 text-center">Сплющь бутылку руками — сэкономишь место в пакете!</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer">
+                    <div className="text-5xl mb-3 text-center">4️⃣</div>
+                    <h4 className="text-lg font-black text-orange-900 mb-2 text-center">СДАЙ</h4>
+                    <p className="text-gray-700 text-center">Найди ближайший пункт на карте и сдай вторсырьё!</p>
+                  </div>
                 </div>
                 
                 <div className="mt-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
