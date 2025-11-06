@@ -10,12 +10,12 @@ const ProblemSolution = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="text-8xl mb-6">⚠️🌍💔</div>
-          <h2 className="text-7xl font-black mb-6 text-white drop-shadow-2xl">
+        <div className="text-center mb-12 animate-fade-in">
+          <div className="text-5xl md:text-6xl mb-4">⚠️🌍💔</div>
+          <h2 className="text-3xl md:text-5xl font-black mb-4 text-white drop-shadow-2xl">
             ПРОБЛЕМА: МУСОР ВОКРУГ НАС
           </h2>
-          <p className="text-3xl text-white/95 font-bold max-w-5xl mx-auto">
+          <p className="text-base md:text-xl text-white/95 font-bold max-w-5xl mx-auto">
             Каждый день мы производим тонны отходов, которые убивают планету. Но есть решение!
           </p>
         </div>
@@ -23,20 +23,20 @@ const ProblemSolution = () => {
         <div className="max-w-7xl mx-auto mb-16">
           <div className="grid lg:grid-cols-2 gap-8 mb-8">
             <Card className="bg-gradient-to-br from-red-500 to-pink-600 border-4 border-white p-10">
-              <div className="text-center mb-8">
-                <div className="text-8xl mb-4">😱</div>
-                <h3 className="text-5xl font-black text-white mb-6 drop-shadow-lg">
+              <div className="text-center mb-6">
+                <div className="text-5xl md:text-6xl mb-3">😱</div>
+                <h3 className="text-2xl md:text-3xl font-black text-white mb-4 drop-shadow-lg">
                   ЧТО ПРОИСХОДИТ?
                 </h3>
               </div>
               
               <div className="space-y-6">
-                <div className="bg-white/95 rounded-2xl p-6 border-4 border-red-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-5xl flex-shrink-0">🌊</div>
+                <div className="bg-white/95 rounded-xl p-4 border-2 border-red-300">
+                  <div className="flex items-start gap-3">
+                    <div className="text-3xl md:text-4xl flex-shrink-0">🌊</div>
                     <div>
-                      <h4 className="text-2xl font-black text-gray-900 mb-2">ОКЕАНЫ ТОНУТ В ПЛАСТИКЕ</h4>
-                      <p className="text-lg text-gray-800 font-bold">
+                      <h4 className="text-base md:text-lg font-black text-gray-900 mb-1">ОКЕАНЫ ТОНУТ В ПЛАСТИКЕ</h4>
+                      <p className="text-sm md:text-base text-gray-800 font-semibold">
                         <span className="text-red-600">8 миллионов тонн</span> пластика попадает в океан каждый год. 
                         Это как высыпать целый мусоровоз в море КАЖДУЮ МИНУТУ! 🚛💦
                       </p>
@@ -44,12 +44,12 @@ const ProblemSolution = () => {
                   </div>
                 </div>
 
-                <div className="bg-white/95 rounded-2xl p-6 border-4 border-orange-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-5xl flex-shrink-0">🐢</div>
+                <div className="bg-white/95 rounded-xl p-4 border-2 border-orange-300">
+                  <div className="flex items-start gap-3">
+                    <div className="text-3xl md:text-4xl flex-shrink-0">🐢</div>
                     <div>
-                      <h4 className="text-2xl font-black text-gray-900 mb-2">ЖИВОТНЫЕ ГИБНУТ</h4>
-                      <p className="text-lg text-gray-800 font-bold">
+                      <h4 className="text-base md:text-lg font-black text-gray-900 mb-1">ЖИВОТНЫЕ ГИБНУТ</h4>
+                      <p className="text-sm md:text-base text-gray-800 font-semibold">
                         <span className="text-red-600">1 миллион</span> морских птиц и 
                         <span className="text-red-600"> 100,000</span> морских животных умирают от пластика ежегодно. 
                         Черепахи путают пакеты с медузами! 😢
@@ -58,12 +58,12 @@ const ProblemSolution = () => {
                   </div>
                 </div>
 
-                <div className="bg-white/95 rounded-2xl p-6 border-4 border-yellow-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-5xl flex-shrink-0">🌳</div>
+                <div className="bg-white/95 rounded-xl p-4 border-2 border-yellow-300">
+                  <div className="flex items-start gap-3">
+                    <div className="text-3xl md:text-4xl flex-shrink-0">🌳</div>
                     <div>
-                      <h4 className="text-2xl font-black text-gray-900 mb-2">СВАЛКИ РАСТУТ</h4>
-                      <p className="text-lg text-gray-800 font-bold">
+                      <h4 className="text-base md:text-lg font-black text-gray-900 mb-1">СВАЛКИ РАСТУТ</h4>
+                      <p className="text-sm md:text-base text-gray-800 font-semibold">
                         В России на свалки отправляется <span className="text-red-600">95%</span> мусора. 
                         Площадь свалок = <span className="text-red-600">4 миллиона гектаров</span> — 
                         это как вся Москва × 30 раз! 🏔️
@@ -72,12 +72,12 @@ const ProblemSolution = () => {
                   </div>
                 </div>
 
-                <div className="bg-white/95 rounded-2xl p-6 border-4 border-green-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-5xl flex-shrink-0">⏰</div>
+                <div className="bg-white/95 rounded-xl p-4 border-2 border-green-300">
+                  <div className="flex items-start gap-3">
+                    <div className="text-3xl md:text-4xl flex-shrink-0">⏰</div>
                     <div>
-                      <h4 className="text-2xl font-black text-gray-900 mb-2">МУСОР НЕ РАЗЛАГАЕТСЯ</h4>
-                      <p className="text-lg text-gray-800 font-bold">
+                      <h4 className="text-base md:text-lg font-black text-gray-900 mb-1">МУСОР НЕ РАЗЛАГАЕТСЯ</h4>
+                      <p className="text-sm md:text-base text-gray-800 font-semibold">
                         Пластиковая бутылка — <span className="text-red-600">450 лет</span> 🍼<br/>
                         Полиэтиленовый пакет — <span className="text-red-600">200 лет</span> 🛍️<br/>
                         Алюминиевая банка — <span className="text-red-600">500 лет</span> 🥫
@@ -89,20 +89,20 @@ const ProblemSolution = () => {
             </Card>
 
             <Card className="bg-gradient-to-br from-green-500 to-emerald-600 border-4 border-white p-10">
-              <div className="text-center mb-8">
-                <div className="text-8xl mb-4">💡</div>
-                <h3 className="text-5xl font-black text-white mb-6 drop-shadow-lg">
+              <div className="text-center mb-6">
+                <div className="text-5xl md:text-6xl mb-3">💡</div>
+                <h3 className="text-2xl md:text-3xl font-black text-white mb-4 drop-shadow-lg">
                   НАШЕ РЕШЕНИЕ!
                 </h3>
               </div>
               
               <div className="space-y-6">
-                <div className="bg-white/95 rounded-2xl p-6 border-4 border-green-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-5xl flex-shrink-0">📸</div>
+                <div className="bg-white/95 rounded-xl p-4 border-2 border-green-300">
+                  <div className="flex items-start gap-3">
+                    <div className="text-3xl md:text-4xl flex-shrink-0">📸</div>
                     <div>
-                      <h4 className="text-2xl font-black text-gray-900 mb-2">1. ФОТО-ДЕТЕКТОР ИИ</h4>
-                      <p className="text-lg text-gray-800 font-bold">
+                      <h4 className="text-base md:text-lg font-black text-gray-900 mb-1">1. ФОТО-ДЕТЕКТОР ИИ</h4>
+                      <p className="text-sm md:text-base text-gray-800 font-semibold">
                         Сфотографируй мусор — узнай КАК утилизировать! Искусственный интеллект 
                         определит тип отхода за 2 секунды и покажет ближайший пункт приёма. 🤖
                       </p>
@@ -110,12 +110,12 @@ const ProblemSolution = () => {
                   </div>
                 </div>
 
-                <div className="bg-white/95 rounded-2xl p-6 border-4 border-blue-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-5xl flex-shrink-0">🗺️</div>
+                <div className="bg-white/95 rounded-xl p-4 border-2 border-blue-300">
+                  <div className="flex items-start gap-3">
+                    <div className="text-3xl md:text-4xl flex-shrink-0">🗺️</div>
                     <div>
-                      <h4 className="text-2xl font-black text-gray-900 mb-2">2. КАРТА ПУНКТОВ ПРИЁМА</h4>
-                      <p className="text-lg text-gray-800 font-bold">
+                      <h4 className="text-base md:text-lg font-black text-gray-900 mb-1">2. КАРТА ПУНКТОВ ПРИЁМА</h4>
+                      <p className="text-sm md:text-base text-gray-800 font-semibold">
                         <span className="text-green-600">12 пунктов</span> по всему Омску! Интерактивная карта 
                         покажет, куда сдать пластик, батарейки, стекло, электронику. Охват <span className="text-green-600">95%</span> города! 📍
                       </p>
@@ -123,12 +123,12 @@ const ProblemSolution = () => {
                   </div>
                 </div>
 
-                <div className="bg-white/95 rounded-2xl p-6 border-4 border-purple-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-5xl flex-shrink-0">🏆</div>
+                <div className="bg-white/95 rounded-xl p-4 border-2 border-purple-300">
+                  <div className="flex items-start gap-3">
+                    <div className="text-3xl md:text-4xl flex-shrink-0">🏆</div>
                     <div>
-                      <h4 className="text-2xl font-black text-gray-900 mb-2">3. ГЕЙМИФИКАЦИЯ</h4>
-                      <p className="text-lg text-gray-800 font-bold">
+                      <h4 className="text-base md:text-lg font-black text-gray-900 mb-1">3. ГЕЙМИФИКАЦИЯ</h4>
+                      <p className="text-sm md:text-base text-gray-800 font-semibold">
                         Зарабатывай баллы за каждый сданный предмет! Соревнуйся со школами и друзьями. 
                         Поднимайся по уровням: Новичок → Эковоин → Спаситель планеты! 🎮
                       </p>
@@ -136,12 +136,12 @@ const ProblemSolution = () => {
                   </div>
                 </div>
 
-                <div className="bg-white/95 rounded-2xl p-6 border-4 border-yellow-300">
-                  <div className="flex items-start gap-4">
-                    <div className="text-5xl flex-shrink-0">📊</div>
+                <div className="bg-white/95 rounded-xl p-4 border-2 border-yellow-300">
+                  <div className="flex items-start gap-3">
+                    <div className="text-3xl md:text-4xl flex-shrink-0">📊</div>
                     <div>
-                      <h4 className="text-2xl font-black text-gray-900 mb-2">4. ОБРАЗОВАНИЕ</h4>
-                      <p className="text-lg text-gray-800 font-bold">
+                      <h4 className="text-base md:text-lg font-black text-gray-900 mb-1">4. ОБРАЗОВАНИЕ</h4>
+                      <p className="text-sm md:text-base text-gray-800 font-semibold">
                         Узнай РЕАЛЬНЫЕ факты про мусор в Омске! Смотри шокирующую статистику в реальном времени. 
                         Играй в эко-игры и проверяй знания! 🎓
                       </p>

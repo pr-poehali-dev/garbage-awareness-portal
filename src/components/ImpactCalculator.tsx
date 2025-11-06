@@ -131,30 +131,30 @@ const ImpactCalculator = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="text-8xl mb-6">🧮🌍💡</div>
-          <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900 drop-shadow-2xl">
+        <div className="text-center mb-8 animate-fade-in">
+          <div className="text-5xl md:text-6xl mb-4">🧮🌍💡</div>
+          <h2 className="text-2xl md:text-4xl font-black mb-3 text-gray-900 drop-shadow-2xl">
             КАЛЬКУЛЯТОР ЭКОСЛЕДА
           </h2>
-          <p className="text-xl md:text-2xl text-gray-800 font-bold max-w-5xl mx-auto">
+          <p className="text-base md:text-xl text-gray-800 font-bold max-w-5xl mx-auto">
             Узнай свой вклад в спасение планеты!
           </p>
         </div>
 
         <div className="max-w-7xl mx-auto">
           <Card className="bg-white/95 backdrop-blur border-4 border-white p-10 mb-8">
-            <div className="text-center mb-8">
-              <h3 className="text-4xl font-black text-gray-900 mb-4">
+            <div className="text-center mb-6">
+              <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-3">
                 📊 НАСТРОЙ КАЛЬКУЛЯТОР
               </h3>
-              <p className="text-xl text-gray-700 font-bold">
+              <p className="text-sm md:text-base text-gray-700 font-bold">
                 Выбери тип мусора, количество и период — узнай реальный эффект переработки!
               </p>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8 mb-8">
               <div>
-                <label className="block text-2xl font-black text-gray-900 mb-4">
+                <label className="block text-lg md:text-xl font-black text-gray-900 mb-3">
                   1️⃣ ТИП МУСОРА
                 </label>
                 <div className="space-y-3">
@@ -168,7 +168,7 @@ const ImpactCalculator = () => {
                           : 'bg-white text-gray-900 border-gray-300 hover:border-green-400'
                       }`}
                     >
-                      <span className="text-3xl mr-3">{item.emoji}</span>
+                      <span className="text-2xl mr-2">{item.emoji}</span>
                       {item.name}
                     </button>
                   ))}
@@ -176,30 +176,30 @@ const ImpactCalculator = () => {
               </div>
 
               <div>
-                <label className="block text-2xl font-black text-gray-900 mb-4">
+                <label className="block text-lg md:text-xl font-black text-gray-900 mb-3">
                   2️⃣ КОЛИЧЕСТВО
                 </label>
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-4 border-blue-300">
-                  <div className="text-center mb-4">
-                    <div className="text-7xl font-black text-blue-600 mb-2">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-4 border-2 border-blue-300">
+                  <div className="text-center mb-3">
+                    <div className="text-4xl md:text-5xl font-black text-blue-600 mb-2">
                       {quantity}
                     </div>
-                    <p className="text-xl font-bold text-gray-700">
+                    <p className="text-sm md:text-base font-bold text-gray-700">
                       {selectedItem.unit} в {timeframeLabels[timeframe]}
                     </p>
                   </div>
                   <div className="flex gap-3">
                     <Button
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className="flex-1 bg-red-500 hover:bg-red-600 text-white font-black text-2xl py-6"
+                      className="flex-1 bg-red-500 hover:bg-red-600 text-white font-black text-lg py-3"
                     >
-                      <Icon name="Minus" size={24} />
+                      <Icon name="Minus" size={20} />
                     </Button>
                     <Button
                       onClick={() => setQuantity(quantity + 1)}
-                      className="flex-1 bg-green-500 hover:bg-green-600 text-white font-black text-2xl py-6"
+                      className="flex-1 bg-green-500 hover:bg-green-600 text-white font-black text-lg py-3"
                     >
-                      <Icon name="Plus" size={24} />
+                      <Icon name="Plus" size={20} />
                     </Button>
                   </div>
                   <div className="mt-4 flex gap-2">
@@ -207,7 +207,7 @@ const ImpactCalculator = () => {
                       <button
                         key={num}
                         onClick={() => setQuantity(num)}
-                        className="flex-1 bg-white border-2 border-blue-400 rounded-lg py-2 font-bold text-gray-900 hover:bg-blue-100"
+                        className="flex-1 bg-white border-2 border-blue-400 rounded-lg py-1.5 text-sm font-bold text-gray-900 hover:bg-blue-100"
                       >
                         {num}
                       </button>
@@ -217,7 +217,7 @@ const ImpactCalculator = () => {
               </div>
 
               <div>
-                <label className="block text-2xl font-black text-gray-900 mb-4">
+                <label className="block text-lg md:text-xl font-black text-gray-900 mb-3">
                   3️⃣ ПЕРИОД
                 </label>
                 <div className="space-y-3">

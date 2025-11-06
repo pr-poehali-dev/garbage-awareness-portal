@@ -54,14 +54,14 @@ const Leaderboard = () => {
       {entries.map((entry) => (
         <Card
           key={entry.rank}
-          className={`relative overflow-hidden border-4 ${
+          className={`relative overflow-hidden border-2 ${
             entry.rank <= 3 ? 'border-yellow-400' : 'border-white'
           } hover:scale-105 transition-all duration-300`}
         >
-          <div className={`bg-gradient-to-r ${getRankColor(entry.rank)} p-6`}>
+          <div className={`bg-gradient-to-r ${getRankColor(entry.rank)} p-4`}>
             <div className="flex items-center gap-6">
               <div className="flex-shrink-0">
-                <div className={`w-20 h-20 rounded-full bg-white flex items-center justify-center text-4xl font-black border-4 ${
+                <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center text-xl md:text-2xl font-black border-2 ${
                   entry.rank <= 3 ? 'border-yellow-500 animate-pulse' : 'border-gray-300'
                 }`}>
                   {entry.rank}
@@ -69,40 +69,40 @@ const Leaderboard = () => {
               </div>
 
               <div className="flex-shrink-0">
-                <div className="text-6xl">{entry.avatar}</div>
+                <div className="text-3xl md:text-4xl">{entry.avatar}</div>
               </div>
 
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-2xl font-black text-white truncate">
+                  <h3 className="text-base md:text-xl font-black text-white truncate">
                     {entry.name}
                   </h3>
-                  <span className="text-3xl">{getRankEmoji(entry.rank)}</span>
+                  <span className="text-xl md:text-2xl">{getRankEmoji(entry.rank)}</span>
                 </div>
                 <p className="text-sm font-bold text-white/90 mb-2">
                   📍 {entry.district}
                 </p>
-                <div className="inline-block bg-white/90 rounded-full px-4 py-1">
-                  <p className="text-sm font-black text-gray-800">
+                <div className="inline-block bg-white/90 rounded-full px-3 py-1">
+                  <p className="text-xs md:text-sm font-black text-gray-800">
                     {entry.achievement}
                   </p>
                 </div>
               </div>
 
               <div className="flex-shrink-0 text-right">
-                <div className="bg-white/90 rounded-xl p-4 mb-2">
+                <div className="bg-white/90 rounded-xl p-2 md:p-3 mb-1.5">
                   <div className="flex items-center justify-end gap-2 mb-1">
                     <Icon name="Star" size={24} className="text-yellow-600" />
-                    <span className="text-3xl font-black text-gray-900">
+                    <span className="text-lg md:text-2xl font-black text-gray-900">
                       {entry.points.toLocaleString()}
                     </span>
                   </div>
                   <p className="text-xs font-bold text-gray-600">БАЛЛОВ</p>
                 </div>
-                <div className="bg-white/90 rounded-xl p-3">
+                <div className="bg-white/90 rounded-xl p-2">
                   <div className="flex items-center justify-end gap-2 mb-1">
                     <Icon name="Recycle" size={20} className="text-green-600" />
-                    <span className="text-xl font-black text-gray-900">
+                    <span className="text-sm md:text-base font-black text-gray-900">
                       {entry.recycled} кг
                     </span>
                   </div>
@@ -129,37 +129,37 @@ const Leaderboard = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12 animate-fade-in">
-          <div className="text-8xl mb-6 animate-bounce">🏆🌍📊</div>
-          <h2 className="text-5xl md:text-6xl font-black mb-4 text-gray-900 drop-shadow-2xl">
+        <div className="text-center mb-8 animate-fade-in">
+          <div className="text-5xl md:text-6xl mb-4 animate-bounce">🏆🌍📊</div>
+          <h2 className="text-2xl md:text-4xl font-black mb-3 text-gray-900 drop-shadow-2xl">
             ТАБЛИЦА ЛИДЕРОВ ОМСКА
           </h2>
-          <p className="text-xl md:text-2xl text-gray-800 font-bold max-w-4xl mx-auto">
+          <p className="text-base md:text-xl text-gray-800 font-bold max-w-4xl mx-auto">
             Соревнуйся со школами, классами и учениками!
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto mb-12">
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="bg-gradient-to-br from-purple-500 to-pink-500 border-4 border-white p-6 text-center hover:scale-105 transition-transform">
-              <div className="text-5xl mb-3">🏫</div>
-              <h3 className="text-2xl font-black text-white mb-2">ШКОЛЫ</h3>
-              <p className="text-5xl font-black text-white mb-1">{schools.length}</p>
-              <p className="text-sm font-bold text-white/90">участвуют в борьбе</p>
+            <Card className="bg-gradient-to-br from-purple-500 to-pink-500 border-2 border-white p-4 text-center hover:scale-105 transition-transform">
+              <div className="text-3xl md:text-4xl mb-2">🏫</div>
+              <h3 className="text-base md:text-lg font-black text-white mb-2">ШКОЛЫ</h3>
+              <p className="text-3xl md:text-4xl font-black text-white mb-1">{schools.length}</p>
+              <p className="text-xs md:text-sm font-bold text-white/90">участвуют в борьбе</p>
             </Card>
 
-            <Card className="bg-gradient-to-br from-orange-500 to-red-500 border-4 border-white p-6 text-center hover:scale-105 transition-transform">
-              <div className="text-5xl mb-3">📚</div>
-              <h3 className="text-2xl font-black text-white mb-2">КЛАССЫ</h3>
-              <p className="text-5xl font-black text-white mb-1">{classes.length}</p>
-              <p className="text-sm font-bold text-white/90">активных команд</p>
+            <Card className="bg-gradient-to-br from-orange-500 to-red-500 border-2 border-white p-4 text-center hover:scale-105 transition-transform">
+              <div className="text-3xl md:text-4xl mb-2">📚</div>
+              <h3 className="text-base md:text-lg font-black text-white mb-2">КЛАССЫ</h3>
+              <p className="text-3xl md:text-4xl font-black text-white mb-1">{classes.length}</p>
+              <p className="text-xs md:text-sm font-bold text-white/90">активных команд</p>
             </Card>
 
-            <Card className="bg-gradient-to-br from-cyan-500 to-blue-500 border-4 border-white p-6 text-center hover:scale-105 transition-transform">
-              <div className="text-5xl mb-3">👥</div>
-              <h3 className="text-2xl font-black text-white mb-2">УЧАСТНИКОВ</h3>
-              <p className="text-5xl font-black text-white mb-1">{individuals.length}</p>
-              <p className="text-sm font-bold text-white/90">эко-героев Омска</p>
+            <Card className="bg-gradient-to-br from-cyan-500 to-blue-500 border-2 border-white p-4 text-center hover:scale-105 transition-transform">
+              <div className="text-3xl md:text-4xl mb-2">👥</div>
+              <h3 className="text-base md:text-lg font-black text-white mb-2">УЧАСТНИКОВ</h3>
+              <p className="text-3xl md:text-4xl font-black text-white mb-1">{individuals.length}</p>
+              <p className="text-xs md:text-sm font-bold text-white/90">эко-героев Омска</p>
             </Card>
           </div>
         </div>
@@ -169,21 +169,21 @@ const Leaderboard = () => {
             <TabsList className="grid w-full grid-cols-3 mb-8 bg-gradient-to-r from-green-100 to-emerald-100 border-4 border-green-400 p-2">
               <TabsTrigger
                 value="schools"
-                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-500 data-[state=active]:text-white font-black text-lg py-4"
+                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-500 data-[state=active]:text-white font-black text-sm md:text-base py-3"
               >
-                <Icon name="School" size={24} className="mr-2" />
+                <Icon name="School" size={18} className="mr-1" />
                 ШКОЛЫ
               </TabsTrigger>
               <TabsTrigger
                 value="classes"
-                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-500 data-[state=active]:text-white font-black text-lg py-4"
+                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-500 data-[state=active]:text-white font-black text-sm md:text-base py-3"
               >
-                <Icon name="Users" size={24} className="mr-2" />
+                <Icon name="Users" size={18} className="mr-1" />
                 КЛАССЫ
               </TabsTrigger>
               <TabsTrigger
                 value="individuals"
-                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-blue-500 data-[state=active]:text-white font-black text-lg py-4"
+                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-blue-500 data-[state=active]:text-white font-black text-sm md:text-base py-3"
               >
                 <Icon name="User" size={24} className="mr-2" />
                 УЧЕНИКИ
