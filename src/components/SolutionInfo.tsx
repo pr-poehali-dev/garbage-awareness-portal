@@ -145,34 +145,34 @@ const SolutionInfo = () => {
           <Card className="bg-gradient-to-br from-pink-100 to-purple-100 border-4 border-pink-500 p-8">
             <div className="flex items-center gap-4 mb-6">
               <div className="text-5xl">🎬</div>
-              <h3 className="text-3xl font-black text-gray-900">УЧИМСЯ СОРТИРОВАТЬ ВМЕСТЕ!</h3>
+              <h3 className="text-3xl font-black text-gray-900">КАК СОРТИРОВАТЬ МУСОР?</h3>
             </div>
             
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="text-center mb-6">
                   <p className="text-xl font-bold text-gray-800 mb-2">
-                    🎯 Обучающий мультфильм о раздельном сборе!
+                    🎯 Реальный опыт раздельного сбора!
                   </p>
                   <p className="text-gray-600">
-                    Смотри веселый и понятный урок — как правильно сортировать мусор дома! 🏠♻️
+                    Девушка из Череповца делится своим опытом участия в акции по раздельному сбору отходов! ♻️
                   </p>
                 </div>
                 
                 <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-pink-500">
                   <iframe
-                    src="https://rutube.ru/play/embed/e1a8bc0c0b826f85bf8ce8ed80ff56b6"
+                    src="https://rutube.ru/play/embed/39b4d8b55250cd9dc11dc435f77419d8"
                     frameBorder="0"
                     allow="clipboard-write; autoplay"
                     allowFullScreen
                     className="w-full aspect-video"
-                    title="Раздельный сбор мусора - обучающий мультфильм"
+                    title="Раздельный сбор мусора - реальный опыт"
                   ></iframe>
                 </div>
                 
                 <div className="mt-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
                   <p className="text-center text-gray-700 font-bold">
-                    💡 За 3 минуты узнаешь всё самое важное о сортировке! Идеально для детей и подростков! 🎓
+                    💡 Узнай, как проходят акции по раздельному сбору и что это даёт городу! 🌍
                   </p>
                 </div>
               </div>
