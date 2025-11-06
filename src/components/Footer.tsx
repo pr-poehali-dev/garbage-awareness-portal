@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Icon name="Leaf" size={32} />
-              <span className="text-xl font-bold">ЭкоМир</span>
+              <span className="text-xl font-bold">Sirius55</span>
             </div>
             <p className="text-background/70">
               Глобальное движение за чистую планету и ответственное обращение с отходами
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-background/20 mt-8 pt-8 text-center text-background/70">
-          <p>© 2025 ЭкоМир. Все права защищены. Сделано с 💚 для нашей планеты</p>
+          <p>© 2025 Sirius55. Все права защищены. Сделано с 💚 для нашей планеты</p>
         </div>
       </div>
     </footer>
