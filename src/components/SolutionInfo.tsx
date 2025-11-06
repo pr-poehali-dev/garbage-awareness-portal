@@ -145,34 +145,34 @@ const SolutionInfo = () => {
           <Card className="bg-gradient-to-br from-pink-100 to-purple-100 border-4 border-pink-500 p-8">
             <div className="flex items-center gap-4 mb-6">
               <div className="text-5xl">🎬</div>
-              <h3 className="text-3xl font-black text-gray-900">КАК СОРТИРОВАТЬ МУСОР?</h3>
+              <h3 className="text-3xl font-black text-gray-900">ПУТЬ МУСОРА: ОТ СОРТИРОВКИ ДО ПЕРЕРАБОТКИ</h3>
             </div>
             
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="text-center mb-6">
                   <p className="text-xl font-bold text-gray-800 mb-2">
-                    🎯 Реальный опыт раздельного сбора!
+                    🏭 Как работает завод по переработке мусора
                   </p>
                   <p className="text-gray-600">
-                    Девушка из Череповца делится своим опытом участия в акции по раздельному сбору отходов! ♻️
+                    Смотри полный процесс — от сортировки отходов до получения готового вторсырья! Рассказ на фоне работающего завода 🎵
                   </p>
                 </div>
                 
                 <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-pink-500">
                   <iframe
-                    src="https://rutube.ru/play/embed/39b4d8b55250cd9dc11dc435f77419d8"
+                    src="https://vk.com/video_ext.php?oid=-174223226&id=456239251&hd=2"
                     frameBorder="0"
-                    allow="clipboard-write; autoplay"
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock"
                     allowFullScreen
                     className="w-full aspect-video"
-                    title="Раздельный сбор мусора - реальный опыт"
+                    title="Как работает завод по переработке мусора"
                   ></iframe>
                 </div>
                 
                 <div className="mt-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
                   <p className="text-center text-gray-700 font-bold">
-                    💡 Узнай, как проходят акции по раздельному сбору и что это даёт городу! 🌍
+                    💡 Увидишь весь процесс переработки изнутри — от сортировки до готовой продукции! Спокойное повествование под фоновую музыку 🎧
                   </p>
                 </div>
               </div>
