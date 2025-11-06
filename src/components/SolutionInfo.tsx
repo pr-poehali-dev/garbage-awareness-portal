@@ -145,34 +145,34 @@ const SolutionInfo = () => {
           <Card className="bg-gradient-to-br from-pink-100 to-purple-100 border-4 border-pink-500 p-8">
             <div className="flex items-center gap-4 mb-6">
               <div className="text-5xl">🎬</div>
-              <h3 className="text-3xl font-black text-gray-900">КАК ЭТО РАБОТАЕТ НА САМОМ ДЕЛЕ?</h3>
+              <h3 className="text-3xl font-black text-gray-900">УЧИМСЯ СОРТИРОВАТЬ ВМЕСТЕ!</h3>
             </div>
             
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="text-center mb-6">
                   <p className="text-xl font-bold text-gray-800 mb-2">
-                    🎯 Реальные люди показывают, куда едет твой мусор!
+                    🎯 Обучающий мультфильм о раздельном сборе!
                   </p>
                   <p className="text-gray-600">
-                    Смотри, как работает сортировочная станция изнутри — это круче любого блокбастера! 🚛♻️
+                    Смотри веселый и понятный урок — как правильно сортировать мусор дома! 🏠♻️
                   </p>
                 </div>
                 
                 <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-pink-500">
                   <iframe
-                    src="https://rutube.ru/play/embed/f37601a465826d7b221497a8ccfa07ce"
+                    src="https://rutube.ru/play/embed/e1a8bc0c0b826f85bf8ce8ed80ff56b6"
                     frameBorder="0"
                     allow="clipboard-write; autoplay"
                     allowFullScreen
                     className="w-full aspect-video"
-                    title="Сортировка и переработка мусора"
+                    title="Раздельный сбор мусора - обучающий мультфильм"
                   ></iframe>
                 </div>
                 
                 <div className="mt-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
                   <p className="text-center text-gray-700 font-bold">
-                    💡 Твой мусор НЕ едет на свалку! Люди руками перебирают его, чтобы спасти то, что можно переработать! 🌍
+                    💡 За 3 минуты узнаешь всё самое важное о сортировке! Идеально для детей и подростков! 🎓
                   </p>
                 </div>
               </div>
