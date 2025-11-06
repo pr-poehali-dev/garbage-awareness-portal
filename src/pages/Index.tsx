@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ProblemSolution from '@/components/ProblemSolution';
+import VideoSection from '@/components/VideoSection';
 import TrashDetector from '@/components/TrashDetector';
 import ImpactCalculator from '@/components/ImpactCalculator';
 import Leaderboard from '@/components/Leaderboard';
@@ -48,6 +49,8 @@ const Index = () => {
       <HeroSection wasteCounter={wasteCounter} recyclingPointsCount={recyclingPoints.length} />
       
       <ProblemSolution />
+      
+      <VideoSection />
       
       <SolutionInfo />
       
