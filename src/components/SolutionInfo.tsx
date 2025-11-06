@@ -145,34 +145,34 @@ const SolutionInfo = () => {
           <Card className="bg-gradient-to-br from-pink-100 to-purple-100 border-4 border-pink-500 p-8">
             <div className="flex items-center gap-4 mb-6">
               <div className="text-5xl">🎬</div>
-              <h3 className="text-3xl font-black text-gray-900">СМОТРИ И УЧИСЬ СОРТИРОВАТЬ!</h3>
+              <h3 className="text-3xl font-black text-gray-900">КАК ЭТО РАБОТАЕТ НА САМОМ ДЕЛЕ?</h3>
             </div>
             
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="text-center mb-6">
                   <p className="text-xl font-bold text-gray-800 mb-2">
-                    🎯 Весёлый мультфильм про Мусорного Монстра и сортировку отходов!
+                    🎯 Реальные люди показывают, куда едет твой мусор!
                   </p>
                   <p className="text-gray-600">
-                    Команда «Помощники Земли» борется с Мусорным Монстром и учит правильно сортировать мусор 🦸‍♂️
+                    Смотри, как работает сортировочная станция изнутри — это круче любого блокбастера! 🚛♻️
                   </p>
                 </div>
                 
                 <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-pink-500">
                   <iframe
-                    src="https://rutube.ru/play/embed/d5fc10a8faaae3a68e9adb2bea34de18"
+                    src="https://rutube.ru/play/embed/f37601a465826d7b221497a8ccfa07ce"
                     frameBorder="0"
                     allow="clipboard-write; autoplay"
                     allowFullScreen
                     className="w-full aspect-video"
-                    title="Помощники Земли - Неправильный мусор"
+                    title="Сортировка и переработка мусора"
                   ></iframe>
                 </div>
                 
                 <div className="mt-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
                   <p className="text-center text-gray-700 font-bold">
-                    💡 Главное — начать! Смотри мультик, узнавай правила и становись Помощником Земли! 🌍
+                    💡 Твой мусор НЕ едет на свалку! Люди руками перебирают его, чтобы спасти то, что можно переработать! 🌍
                   </p>
                 </div>
               </div>
