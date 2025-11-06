@@ -19,13 +19,22 @@ const HeroSection = ({ wasteCounter, recyclingPointsCount }: HeroSectionProps) =
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <Badge className="mb-4 bg-secondary text-secondary-foreground">
-            <Icon name="Sparkles" size={16} className="mr-1" />
+          <div className="mb-6 inline-block">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="text-5xl md:text-7xl animate-bounce">🌟</div>
+              <h1 className="text-4xl md:text-6xl font-black bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
+                SIRIUS55
+              </h1>
+              <div className="text-5xl md:text-7xl animate-bounce" style={{animationDelay: '0.2s'}}>🚀</div>
+            </div>
+            <p className="text-xl md:text-2xl font-bold text-emerald-600 animate-pulse">
+              Омск за чистое будущее планеты!
+            </p>
+          </div>
+          <Badge className="mb-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-lg px-6 py-2">
+            <Icon name="Sparkles" size={20} className="mr-2" />
             Экология начинается с каждого из нас
           </Badge>
-          <h1 className="text-3xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            Мусор вокруг нас
-          </h1>
           <p className="text-base md:text-lg text-muted-foreground mb-6">
             Узнай, как правильно сортировать мусор, найди пункт приёма и спаси планету! 🌍♻️
           </p>
