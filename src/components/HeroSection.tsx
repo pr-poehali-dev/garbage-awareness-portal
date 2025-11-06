@@ -40,28 +40,34 @@ const HeroSection = ({ wasteCounter, recyclingPointsCount }: HeroSectionProps) =
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <Card className="p-6 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-shadow animate-scale-in">
-              <Icon name="TrendingUp" className="text-accent mx-auto mb-3" size={40} />
-              <div className="text-4xl font-bold text-primary mb-2 animate-counter">
+            <Card className="p-6 bg-white/90 backdrop-blur-sm hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-scale-in cursor-pointer group">
+              <div className="bg-gradient-to-br from-orange-100 to-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <Icon name="TrendingUp" className="text-accent" size={40} />
+              </div>
+              <div className="text-4xl font-bold text-primary mb-2">
                 {wasteCounter.toLocaleString('ru-RU')}
               </div>
-              <p className="text-xs text-muted-foreground">тонн мусора производится в мире ежегодно</p>
+              <p className="text-sm text-muted-foreground font-semibold">тонн мусора производится в мире ежегодно</p>
             </Card>
             
-            <Card className="p-6 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-shadow animate-scale-in" style={{animationDelay: '0.1s'}}>
-              <Icon name="Recycle" className="text-primary mx-auto mb-3" size={40} />
+            <Card className="p-6 bg-white/90 backdrop-blur-sm hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-scale-in cursor-pointer group" style={{animationDelay: '0.1s'}}>
+              <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <Icon name="Recycle" className="text-primary" size={40} />
+              </div>
               <div className="text-4xl font-bold text-secondary mb-2">
                 {recyclingPointsCount}
               </div>
-              <p className="text-xs text-muted-foreground">пунктов приёма вторсырья</p>
+              <p className="text-sm text-muted-foreground font-semibold">пунктов приёма вторсырья в Омске</p>
             </Card>
             
-            <Card className="p-6 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-shadow animate-scale-in" style={{animationDelay: '0.2s'}}>
-              <Icon name="Trees" className="text-secondary mx-auto mb-3" size={40} />
+            <Card className="p-6 bg-white/90 backdrop-blur-sm hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-scale-in cursor-pointer group" style={{animationDelay: '0.2s'}}>
+              <div className="bg-gradient-to-br from-green-100 to-lime-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <Icon name="Trees" className="text-secondary" size={40} />
+              </div>
               <div className="text-4xl font-bold text-accent mb-2">
                 12%
               </div>
-              <p className="text-xs text-muted-foreground">мусора перерабатывается</p>
+              <p className="text-sm text-muted-foreground font-semibold">мусора перерабатывается</p>
             </Card>
           </div>
         </div>

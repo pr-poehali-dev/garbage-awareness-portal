@@ -29,11 +29,16 @@ const OmskMapImage = ({ recyclingPoints }: OmskMapImageProps) => {
   });
 
   return (
-    <section id="map-section" className="py-20 bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+    <section id="map" className="py-20 bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_60px,rgba(255,255,255,0.1)_60px,rgba(255,255,255,0.1)_120px)]"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12 animate-fade-in">
+          <div className="text-6xl mb-4 animate-bounce">🗺️📍</div>
           <h2 className="text-4xl md:text-5xl font-black mb-4 text-white drop-shadow-2xl">
-            🗺️ КАРТА ПУНКТОВ ПЕРЕРАБОТКИ
+            КАРТА ПУНКТОВ ПЕРЕРАБОТКИ
           </h2>
           <p className="text-xl md:text-2xl text-white/90 font-bold">
             Омск — {recyclingPoints.length} точек сбора вторсырья
@@ -43,7 +48,7 @@ const OmskMapImage = ({ recyclingPoints }: OmskMapImageProps) => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <Card className="bg-gradient-to-br from-emerald-100 to-blue-100 border-8 border-white p-8 relative overflow-hidden">
+              <Card className="bg-gradient-to-br from-emerald-100 to-blue-100 border-8 border-white p-8 relative overflow-hidden hover:shadow-2xl transition-shadow duration-300">
                 <div className="relative w-full" style={{ paddingBottom: '75%' }}>
                   <svg
                     viewBox="0 0 800 600"

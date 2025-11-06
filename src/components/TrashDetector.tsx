@@ -194,8 +194,8 @@ const TrashDetector = () => {
 
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-8 mb-8">
-            <Card className="bg-gradient-to-br from-green-400 to-emerald-500 border-4 border-white p-6 text-center">
-              <div className="text-5xl mb-3">{level.emoji}</div>
+            <Card className="bg-gradient-to-br from-green-400 to-emerald-500 border-4 border-white p-6 text-center hover:scale-105 transition-transform duration-300 animate-pulse-glow">
+              <div className="text-5xl mb-3 animate-bounce">{level.emoji}</div>
               <h3 className="text-2xl font-black text-white mb-2">ТВОЙ УРОВЕНЬ</h3>
               <p className={`text-4xl font-black ${level.color} bg-white rounded-xl py-2`}>
                 {level.name}

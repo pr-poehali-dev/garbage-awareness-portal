@@ -41,7 +41,7 @@ const Index = () => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white scroll-smooth">
       <FloatingLogo />
       <FloatingSchoolLogo />
       <Header />

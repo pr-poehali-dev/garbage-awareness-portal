@@ -20,8 +20,9 @@ const Header = () => {
           </div>
         </div>
         <div className="hidden md:flex gap-6">
-          <a href="#hero" className="text-foreground hover:text-primary transition-colors">Главная</a>
-          <a href="#map" className="text-foreground hover:text-primary transition-colors">Пункты приёма</a>
+          <a href="#hero" className="text-foreground hover:text-primary transition-all duration-300 font-semibold hover:scale-110 inline-block">Главная</a>
+          <a href="#detector-section" className="text-foreground hover:text-primary transition-all duration-300 font-semibold hover:scale-110 inline-block">ИИ-Детектор</a>
+          <a href="#map" className="text-foreground hover:text-primary transition-all duration-300 font-semibold hover:scale-110 inline-block">Карта</a>
         </div>
       </nav>
     </header>
