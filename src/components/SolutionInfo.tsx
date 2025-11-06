@@ -145,49 +145,34 @@ const SolutionInfo = () => {
           <Card className="bg-gradient-to-br from-pink-100 to-purple-100 border-4 border-pink-500 p-8">
             <div className="flex items-center gap-4 mb-6">
               <div className="text-5xl">🎬</div>
-              <h3 className="text-3xl font-black text-gray-900">КАК СОРТИРОВАТЬ МУСОР</h3>
+              <h3 className="text-3xl font-black text-gray-900">СМОТРИ И УЧИСЬ СОРТИРОВАТЬ!</h3>
             </div>
             
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="text-center mb-6">
                   <p className="text-xl font-bold text-gray-800 mb-2">
-                    🎯 Простые правила сортировки
+                    🎯 Весёлый мультфильм про Мусорного Монстра и сортировку отходов!
                   </p>
                   <p className="text-gray-600">
-                    Следуй этим шагам — и ты уже эковоин!
+                    Команда «Помощники Земли» борется с Мусорным Монстром и учит правильно сортировать мусор 🦸‍♂️
                   </p>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer">
-                    <div className="text-5xl mb-3 text-center">1️⃣</div>
-                    <h4 className="text-lg font-black text-blue-900 mb-2 text-center">СПОЛОСНИ</h4>
-                    <p className="text-gray-700 text-center">Промой бутылку или банку водой, чтоб не осталось еды</p>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer">
-                    <div className="text-5xl mb-3 text-center">2️⃣</div>
-                    <h4 className="text-lg font-black text-green-900 mb-2 text-center">СНИМИ ЭТИКЕТКУ</h4>
-                    <p className="text-gray-700 text-center">Убери лишнее — бумажки, плёнку, крышки в отдельный пакет</p>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer">
-                    <div className="text-5xl mb-3 text-center">3️⃣</div>
-                    <h4 className="text-lg font-black text-purple-900 mb-2 text-center">СОМНИ</h4>
-                    <p className="text-gray-700 text-center">Сплющь бутылку руками — сэкономишь место в пакете!</p>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer">
-                    <div className="text-5xl mb-3 text-center">4️⃣</div>
-                    <h4 className="text-lg font-black text-orange-900 mb-2 text-center">СДАЙ</h4>
-                    <p className="text-gray-700 text-center">Найди ближайший пункт на карте и сдай вторсырьё!</p>
-                  </div>
+                <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-pink-500">
+                  <iframe
+                    src="https://rutube.ru/play/embed/d5fc10a8faaae3a68e9adb2bea34de18"
+                    frameBorder="0"
+                    allow="clipboard-write; autoplay"
+                    allowFullScreen
+                    className="w-full aspect-video"
+                    title="Помощники Земли - Неправильный мусор"
+                  ></iframe>
                 </div>
                 
                 <div className="mt-6 bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
                   <p className="text-center text-gray-700 font-bold">
-                    💡 Главное — начать! Даже маленький шаг к раздельному сбору — это огромный вклад в будущее планеты! 🌍
+                    💡 Главное — начать! Смотри мультик, узнавай правила и становись Помощником Земли! 🌍
                   </p>
                 </div>
               </div>
