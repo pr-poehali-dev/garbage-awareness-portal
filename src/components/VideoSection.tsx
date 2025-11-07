@@ -38,9 +38,9 @@ const VideoSection = () => {
             <div className="relative overflow-hidden rounded-xl shadow-2xl bg-black" style={{ paddingBottom: '56.25%' }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
-                src="https://vk.com/video_ext.php?oid=-30558759&id=456239125&hd=2"
-                allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+                src="https://rutube.ru/play/embed/40c74e831d6bb029a2e1b887fbf26ecf/"
                 frameBorder="0"
+                allow="clipboard-write; autoplay"
                 allowFullScreen
                 title="Видео про переработку мусора"
               ></iframe>
